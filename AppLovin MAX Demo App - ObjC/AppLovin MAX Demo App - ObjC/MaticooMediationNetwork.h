@@ -18,17 +18,6 @@
 + (instancetype)manager;
 
 /**
- Get请求
-
- @param path HOST URL
- @param params 参数字典
- @param isJson 是否需要Json解析
- @param complete 回调Block
- @return id
- */
-+ (id)GET:(NSString *)path parameters:(NSDictionary *)params isRetJson:(BOOL)isJson completeHandler:(void(^)(id responseObj, NSError* error))complete;
-
-/**
  Post请求
 
  @param path HOST URL

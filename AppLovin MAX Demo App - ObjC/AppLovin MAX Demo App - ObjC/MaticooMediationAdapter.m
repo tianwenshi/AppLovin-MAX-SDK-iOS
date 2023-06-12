@@ -7,7 +7,7 @@
 //
 
 #import "MaticooMediationAdapter.h"
-
+#import "MaticooMediationTrackManager.h"
 #define ADAPTER_VERSION @"1.0.0"
 #define SDK_VERSION @"1.0.0"
 
@@ -69,19 +69,17 @@
 
 - (void)initializeWithParameters:(id<MAAdapterInitializationParameters>)parameters completionHandler:(void (^)(MAAdapterInitializationStatus, NSString *_Nullable))completionHandler
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-        NSString *appKey = [parameters.serverParameters al_stringForKey: @"app_id"];
-        NSLog(@"Initializing Maticoo SDK with app key: %@...", appKey);
-        // Override point for customization after application launch.
-        completionHandler(MAAdapterInitializationStatusDoesNotApply, nil);
-        [[MaticooAds shareSDK] initSDK:appKey onSuccess:^() {
-            completionHandler(MAAdapterInitializationStatusInitializedSuccess, nil);
-        } onError:^(NSError* error) {
-            completionHandler(MAAdapterInitializationStatusInitializedFailure, error.description);
-        }];
-    });
+    NSString *appKey = [parameters.serverParameters al_stringForKey: @"app_id"];
+    NSLog(@"Initializing Maticoo SDK with app key: %@...", appKey);
+    // Override point for customization after application launch.
+    completionHandler(MAAdapterInitializationStatusDoesNotApply, nil);
+    [[MaticooAds shareSDK] initSDK:appKey onSuccess:^() {
+        [MaticooMediationTrackManager trackMediationInitSuccess];
+        completionHandler(MAAdapterInitializationStatusInitializedSuccess, nil);
+    } onError:^(NSError* error) {
+        [MaticooMediationTrackManager trackMediationInitFailed:error];
+        completionHandler(MAAdapterInitializationStatusInitializedFailure, error.description);
+    }];
 }
 
 - (NSString *)SDKVersion
@@ -100,7 +98,8 @@
 {
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
     NSLog(@"Loading interstitial ad: %@...", placementIdentifier);
-        
+    [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:INTERSTITIAL isAutoRefresh:NO];
+    
     self.interstitial = [[MATInterstitialAd alloc] initWithPlacementID:placementIdentifier];
     self.interstitialAdapterDelegate = [[ALMaticooMediationAdapterInterstitialAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
     self.interstitial.delegate = self.interstitialAdapterDelegate;
@@ -128,7 +127,7 @@
 {
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
     [self log: @"Loading rewarded ad: %@...", placementIdentifier];
-    
+    [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:REWARDEDVIDEO isAutoRefresh:NO];
     
     self.rewardedVideoAd = [[MATRewardedVideoAd alloc] initWithPlacementID: placementIdentifier];
     self.rewardedAdapterDelegate = [[ALMaticooMediationAdapterRewardedVideoAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
@@ -183,6 +182,7 @@
     
     if ( isNative )
     {
+        [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:NATIVE isAutoRefresh:NO];
         self.nativeAd = [[MATNativeAd alloc] initWithPlacementID: placementIdentifier];
         self.nativeAdViewAdAdapterDelegate = [[ALMaticooMediationAdapterNativeAdViewAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
         self.nativeAd.delegate = self.nativeAdViewAdAdapterDelegate;
@@ -191,6 +191,7 @@
     }
     else
     {
+        [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:BANNER isAutoRefresh:NO];
         CGSize adSize = [self adSizeFromAdFormat: adFormat];
         self.bannerAdView = [[MATBannerAd alloc] initWithPlacementID:placementIdentifier];
         self.bannerAdView.frame = CGRectMake(0, 0, adSize.width, adSize.height);
@@ -209,6 +210,7 @@
     BOOL isNativeBanner = [serverParameters al_boolForKey: @"is_native_banner"];
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
     [self log: @"Loading native %@ad: %@...", isNativeBanner ? @"banner " : @"" , placementIdentifier];
+    [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:NATIVE isAutoRefresh:NO];
     dispatchOnMainQueue(^{
         self.nativeAd = [[MATNativeAd alloc] initWithPlacementID: placementIdentifier];
         self.nativeAdAdapterDelegate = [[ALMaticooMediationAdapterNativeAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
@@ -220,7 +222,6 @@
 - (void)renderTrueNativeAd:(MATNativeAd *)nativeAd
                  andNotify:(id<MANativeAdAdapterDelegate>)delegate
 {
-    // `nativeAd` may be nil if the adapter is destroyed before the ad loaded (timed out).
     if ( !nativeAd )
     {
         [self log: @"Native ad failed to load: no fill"];
@@ -229,25 +230,6 @@
         return;
     }
     
-//    if ( ![nativeAd isAdValid] )
-//    {
-//        [self log: @"Native ad failed to load: ad is no longer valid"];
-//        [delegate didFailToLoadNativeAdWithError: MAAdapterError.adExpiredError];
-//
-//        return;
-//    }
-    
-//    NSString *templateName = [serverParameters al_stringForKey: @"template" defaultValue: @""];
-//    BOOL isTemplateAd = [templateName al_isValidString];
-//    if ( isTemplateAd)
-//    {
-//        [self e: @"Native ad (%@) does not have required assets.", nativeAd];
-//        [delegate didFailToLoadNativeAdWithError: [MAAdapterError errorWithCode: -5400 errorString: @"Missing Native Ad Assets"]];
-//
-//        return;
-//    }
-//
-    // Ensure UI rendering is done on main queue
     dispatchOnMainQueue(^{
         
         MANativeAd *maxNativeAd = [[MAMaticooNativeAd alloc] initWithParentAdapter: self builderBlock:^(MANativeAdBuilder *builder) {
@@ -305,27 +287,32 @@
 
 - (void)interstitialAdDidLoad:(MATInterstitialAd *)interstitialAd{
     NSLog(@"interstitialAd interstitialAdDidLoad");
+    [MaticooMediationTrackManager trackMediationAdRequestFilled:interstitialAd.placementID adType:INTERSTITIAL];
     [self.delegate didLoadInterstitialAd];
     return;
 }
 
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd didFailWithError:(NSError *)error{
     NSLog(@"interstitialAd didFailWithError, %@, %@", interstitialAd.placementID, error.description);
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:interstitialAd.placementID adType:INTERSTITIAL];
     MAAdapterError *adapterError = nil;
     [self.delegate didFailToLoadInterstitialAdWithError: adapterError];
 }
 
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd displayFailWithError:(NSError *)error{
     NSLog(@"interstitialAd displayFailWithError, %@", error.description);
+    [MaticooMediationTrackManager trackMediationAdImpFailed:interstitialAd.placementID adType:INTERSTITIAL];
 }
 
 - (void)interstitialAdWillLogImpression:(MATInterstitialAd *)interstitialAd{
     NSLog(@"interstitialAdWillLogImpression");
+    [MaticooMediationTrackManager trackMediationAdImp:interstitialAd.placementID adType:INTERSTITIAL];
     [self.delegate didDisplayInterstitialAd];
 }
 
 - (void)interstitialAdDidClick:(MATInterstitialAd *)interstitialAd{
     NSLog(@"interstitialAdDidClick");
+    [MaticooMediationTrackManager trackMediationAdClick:interstitialAd.placementID adType:INTERSTITIAL];
     [self.delegate didClickInterstitialAd];
 }
 
@@ -356,17 +343,20 @@
 
 //rewarded video delegate
 - (void)rewardedVideoAdDidLoad:(MATRewardedVideoAd *)rewardedVideoAd{
+    [MaticooMediationTrackManager trackMediationAdRequestFilled:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
     [self.parentAdapter log: @"Rewarded ad loaded: %@", rewardedVideoAd.placementID];
     [self.delegate didLoadRewardedAd];
 }
 
 - (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error{
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
     MAAdapterError *adapterError = nil;
     [self.parentAdapter log: @"Rewarded ad (%@) failed to load with error: %@", rewardedVideoAd.placementID, adapterError];
     [self.delegate didFailToLoadRewardedAdWithError: adapterError];
 }
 
 - (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd displayFailWithError:(NSError *)error{
+    [MaticooMediationTrackManager trackMediationAdImpFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
     [self.parentAdapter log: @"Rewarded video displayFailWithError: %@", rewardedVideoAd.placementID];
     [self.delegate didFailToDisplayRewardedAdWithError: MAAdapterError.adDisplayFailedError];
 }
@@ -382,12 +372,14 @@
 }
 
 - (void)rewardedVideoAdWillLogImpression:(MATRewardedVideoAd *)rewardedVideoAd{
+    [MaticooMediationTrackManager trackMediationAdImp:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
     [self.parentAdapter log: @"Rewarded video impression: %@", rewardedVideoAd.placementID];
     [self.delegate didDisplayRewardedAd];
     
 }
 
 - (void)rewardedVideoAdDidClick:(MATRewardedVideoAd *)rewardedVideoAd{
+    [MaticooMediationTrackManager trackMediationAdClick:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
     [self.parentAdapter log: @"Rewarded ad clicked: %@", rewardedVideoAd.placementID];
     [self.delegate didClickRewardedAd];
 }
@@ -423,23 +415,27 @@
 }
 
 - (void)bannerAdDidLoad:(nonnull MATBannerAd *)bannerAd {
+    [MaticooMediationTrackManager trackMediationAdRequestFilled:bannerAd.placementID adType:BANNER];
     [self.parentAdapter log: @"Banner loaded: %@", bannerAd.placementID];
     [self.delegate didLoadAdForAdView: bannerAd];
 }
 
 - (void)bannerAd:(nonnull MATBannerAd *)bannerAd didFailWithError:(nonnull NSError *)error {
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:bannerAd.placementID adType:BANNER];
     MAAdapterError *adapterError = nil;
     [self.parentAdapter log: @"Banner (%@) failed to load with error: %@", bannerAd.placementID, adapterError];
     [self.delegate didFailToLoadAdViewAdWithError: adapterError];
 }
 
 - (void)bannerAdDidClick:(nonnull MATBannerAd *)bannerAd {
+    [MaticooMediationTrackManager trackMediationAdClick:bannerAd.placementID adType:BANNER];
     [self.parentAdapter log: @"Banner clicked: %@", bannerAd.placementID];
     [self.delegate didClickAdViewAd];
     [self.delegate didExpandAdViewAd];
 }
 
 - (void)bannerAdDidImpression:(nonnull MATBannerAd *)bannerAd {
+    [MaticooMediationTrackManager trackMediationAdImp:bannerAd.placementID adType:BANNER];
     [self.parentAdapter log: @"Banner shown: %@", bannerAd.placementID];
     [self.delegate didDisplayAdViewAd];
 }
@@ -458,6 +454,7 @@
 }
 
 - (void)nativeAdClicked:(nonnull MATNativeAd *)nativeAd {
+    [MaticooMediationTrackManager trackMediationAdClick:nativeAd.placementID adType:NATIVE];
     [self.parentAdapter log: @"Native clicked: %@", nativeAd.placementID];
     [self.delegate didClickAdViewAd];
     [self.delegate didExpandAdViewAd];
@@ -468,20 +465,23 @@
 }
 
 - (void)nativeAdDisplayFailed:(nonnull MATNativeAd *)nativeAd {
-    
+    [MaticooMediationTrackManager trackMediationAdImpFailed:nativeAd.placementID adType:NATIVE];
 }
 
 - (void)nativeAdDisplayed:(nonnull MATNativeAd *)nativeAd {
+    [MaticooMediationTrackManager trackMediationAdImp:nativeAd.placementID adType:NATIVE];
     [self.parentAdapter log: @"Native shown: %@", nativeAd.placementID];
     [self.delegate didDisplayAdViewAd];
 }
 
 - (void)nativeAdFailed:(nonnull MATNativeAd *)nativeAd withError:(nonnull NSError *)error {
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeAd.placementID adType:NATIVE];
     [self.parentAdapter log: @"Native (%@) failed to load with error: %@", nativeAd.placementID, error];
     [self.delegate didFailToLoadAdViewAdWithError: error];
 }
 
 - (void)nativeAdLoadSuccess:(nonnull MATNativeAd *)nativeAd {
+    [MaticooMediationTrackManager trackMediationAdRequestFilled:nativeAd.placementID adType:NATIVE];
     [self.parentAdapter log: @"Native ad loaded: %@", nativeAd.placementID];
     [self.parentAdapter renderTrueNativeAd: nativeAd
                                  andNotify: self.delegate];
@@ -501,6 +501,7 @@
     return self;
 }
 - (void)nativeAdClicked:(nonnull MATNativeAd *)nativeAd {
+    [MaticooMediationTrackManager trackMediationAdClick:nativeAd.placementID adType:NATIVE];
     [self.parentAdapter log: @"Native ad clicked: %@", nativeAd.placementID];
     [self.delegate didClickNativeAd];
 }
@@ -510,21 +511,24 @@
 }
 
 - (void)nativeAdDisplayFailed:(nonnull MATNativeAd *)nativeAd {
-    
+    [MaticooMediationTrackManager trackMediationAdImpFailed:nativeAd.placementID adType:NATIVE];
 }
 
 - (void)nativeAdDisplayed:(nonnull MATNativeAd *)nativeAd {
+    [MaticooMediationTrackManager trackMediationAdImp:nativeAd.placementID adType:NATIVE];
     [self.parentAdapter log: @"Native ad shown: %@", nativeAd.placementID];
     [self.delegate didDisplayNativeAdWithExtraInfo: nil];
 }
 
 - (void)nativeAdFailed:(nonnull MATNativeAd *)nativeAd withError:(nonnull NSError *)error {
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeAd.placementID adType:NATIVE];
     MAAdapterError *adapterError = nil;
      [self.parentAdapter log: @"Native (%@) failed to load with error: %@",  nativeAd.placementID, adapterError];
      [self.delegate didFailToLoadNativeAdWithError: adapterError];
 }
 
 - (void)nativeAdLoadSuccess:(nonnull MATNativeAd *)nativeAd {
+    [MaticooMediationTrackManager trackMediationAdRequestFilled:nativeAd.placementID adType:NATIVE];
     [self.parentAdapter log: @"Native ad loaded: %@", nativeAd.placementID];
     [self.parentAdapter renderTrueNativeAd: nativeAd
                                  andNotify: self.delegate];

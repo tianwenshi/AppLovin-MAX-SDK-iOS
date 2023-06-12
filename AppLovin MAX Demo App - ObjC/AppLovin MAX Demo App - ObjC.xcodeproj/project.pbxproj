@@ -13,6 +13,8 @@
 		28BC14812A15CD450068174B /* MaticooMediationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC14802A15CD450068174B /* MaticooMediationAdapter.m */; };
 		28BC148F2A1629250068174B /* MaticooSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BC148D2A1628650068174B /* MaticooSDK.framework */; };
 		28BE668A2A36EF8E0063038B /* MaticooMediationNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */; };
+		28BE668D2A36F0140063038B /* MaticooMediationURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE668C2A36F0140063038B /* MaticooMediationURLSession.m */; };
+		28BE66902A36FAD60063038B /* MaticooMediationTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE668F2A36FAD60063038B /* MaticooMediationTrackManager.m */; };
 		3517A8CF27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517A8CE27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m */; };
 		3517A8D227F76F9D0074CCDE /* ALMAXAdPlacerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517A8D127F76F9D0074CCDE /* ALMAXAdPlacerTableViewController.m */; };
 		35C0C88027F786A50030B2F8 /* ALTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C0C87F27F786A50030B2F8 /* ALTextCollectionViewCell.m */; };
@@ -80,6 +82,10 @@
 		28BC148D2A1628650068174B /* MaticooSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaticooSDK.framework; sourceTree = "<group>"; };
 		28BE66882A36EF8E0063038B /* MaticooMediationNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationNetwork.h; sourceTree = "<group>"; };
 		28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationNetwork.m; sourceTree = "<group>"; };
+		28BE668B2A36F0140063038B /* MaticooMediationURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationURLSession.h; sourceTree = "<group>"; };
+		28BE668C2A36F0140063038B /* MaticooMediationURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationURLSession.m; sourceTree = "<group>"; };
+		28BE668E2A36FAD60063038B /* MaticooMediationTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationTrackManager.h; sourceTree = "<group>"; };
+		28BE668F2A36FAD60063038B /* MaticooMediationTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationTrackManager.m; sourceTree = "<group>"; };
 		3517A8CD27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMAXAdPlacerCollectionViewController.h; sourceTree = "<group>"; };
 		3517A8CE27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALMAXAdPlacerCollectionViewController.m; sourceTree = "<group>"; };
 		3517A8D027F76F9D0074CCDE /* ALMAXAdPlacerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMAXAdPlacerTableViewController.h; sourceTree = "<group>"; };
@@ -248,6 +254,10 @@
 				28BC14802A15CD450068174B /* MaticooMediationAdapter.m */,
 				28BE66882A36EF8E0063038B /* MaticooMediationNetwork.h */,
 				28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */,
+				28BE668B2A36F0140063038B /* MaticooMediationURLSession.h */,
+				28BE668C2A36F0140063038B /* MaticooMediationURLSession.m */,
+				28BE668E2A36FAD60063038B /* MaticooMediationTrackManager.h */,
+				28BE668F2A36FAD60063038B /* MaticooMediationTrackManager.m */,
 			);
 			path = "AppLovin MAX Demo App - ObjC";
 			sourceTree = "<group>";
@@ -669,6 +679,7 @@
 				28BE668A2A36EF8E0063038B /* MaticooMediationNetwork.m in Sources */,
 				E567854623F22E1300ACA6C1 /* ALDemoRewardedVideosZoneViewController.m in Sources */,
 				3517A8CF27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m in Sources */,
+				28BE668D2A36F0140063038B /* MaticooMediationURLSession.m in Sources */,
 				62CD0EE8286E1C7400BD03CE /* ALMAXMRecTableViewCell.m in Sources */,
 				37B6CEDB246E05D00068A6A4 /* ALMAXInterfaceBuilderMRecAdViewController.m in Sources */,
 				35C0C88027F786A50030B2F8 /* ALTextCollectionViewCell.m in Sources */,
@@ -692,6 +703,7 @@
 				E56785F923F35BC200ACA6C1 /* ALDemoInterfaceBuilderLeaderViewController.m in Sources */,
 				E573083123EB96E400D972F4 /* ALDemoInterstitialBasicIntegrationViewController.m in Sources */,
 				77B6F438279B51AB0063F81D /* ALMAXTemplateNativeAdViewController.m in Sources */,
+				28BE66902A36FAD60063038B /* MaticooMediationTrackManager.m in Sources */,
 				37C7E1EF2328904E002165B5 /* ALMAXInterfaceBuilderBannerAdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
