@@ -25,7 +25,7 @@
     
     self.data = [UIFont.familyNames sortedArrayUsingSelector: @selector(compare:)];
     
-    MAAdPlacerSettings *settings = [MAAdPlacerSettings settingsWithAdUnitIdentifier: @"YOUR_AD_UNIT_ID"];
+    MAAdPlacerSettings *settings = [MAAdPlacerSettings settingsWithAdUnitIdentifier: @"e5c6ba125b57f330"];
     [settings addFixedPosition: [NSIndexPath indexPathForItem: 2 inSection: 0]];
     [settings addFixedPosition: [NSIndexPath indexPathForItem: 8 inSection: 0]];
     settings.repeatingInterval = 5;

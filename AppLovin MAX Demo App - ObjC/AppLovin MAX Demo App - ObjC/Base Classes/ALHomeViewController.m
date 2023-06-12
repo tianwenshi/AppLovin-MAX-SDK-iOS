@@ -70,6 +70,7 @@ static const NSInteger kRowIndexToHideForPhone = 3;
      */
     ALSdk *sdk = [ALSdk shared];
     sdk.settings.muted = !sdk.settings.muted;
+    sdk.settings.verboseLoggingEnabled = YES;
     sender.image = [self muteIconForCurrentSdkMuteSetting];
 }
 

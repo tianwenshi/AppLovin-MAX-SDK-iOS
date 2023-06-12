@@ -10,6 +10,9 @@
 		1D992FE6231FA1C400C472F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D992FE4231FA1C400C472F8 /* Main.storyboard */; };
 		1D992FE8231FA1C500C472F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D992FE7231FA1C500C472F8 /* Assets.xcassets */; };
 		1D992FEB231FA1C500C472F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D992FE9231FA1C500C472F8 /* LaunchScreen.storyboard */; };
+		28BC14812A15CD450068174B /* MaticooMediationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC14802A15CD450068174B /* MaticooMediationAdapter.m */; };
+		28BC148F2A1629250068174B /* MaticooSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BC148D2A1628650068174B /* MaticooSDK.framework */; };
+		28BE668A2A36EF8E0063038B /* MaticooMediationNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */; };
 		3517A8CF27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517A8CE27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m */; };
 		3517A8D227F76F9D0074CCDE /* ALMAXAdPlacerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517A8D127F76F9D0074CCDE /* ALMAXAdPlacerTableViewController.m */; };
 		35C0C88027F786A50030B2F8 /* ALTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C0C87F27F786A50030B2F8 /* ALTextCollectionViewCell.m */; };
@@ -54,7 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03BC9EB9E864EC8A282B84DB /* Pods-AppLovin MAX Demo App - ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin MAX Demo App - ObjC.debug.xcconfig"; path = "Target Support Files/Pods-AppLovin MAX Demo App - ObjC/Pods-AppLovin MAX Demo App - ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		03BC9EB9E864EC8A282B84DB /* Pods-AppLovin MAX Demo App - ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin MAX Demo App - ObjC.debug.xcconfig"; path = "../../AppLovin-MAX-SDK-iOS/AppLovin MAX Demo App - ObjC/Pods/Target Support Files/Pods-AppLovin MAX Demo App - ObjC/Pods-AppLovin MAX Demo App - ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		13C37ED6A69CB1BAEB81EB97 /* Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC.release.xcconfig"; path = "Target Support Files/Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC/Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		1D0CB32E23204CE70076AAAA /* ALMAXInterstitialAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMAXInterstitialAdViewController.h; sourceTree = "<group>"; };
 		1D0CB32F23204CE70076AAAA /* ALMAXInterstitialAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALMAXInterstitialAdViewController.m; sourceTree = "<group>"; };
@@ -72,6 +75,11 @@
 		1D992FEA231FA1C500C472F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D992FEC231FA1C500C472F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D992FED231FA1C500C472F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28BC147F2A15CD450068174B /* MaticooMediationAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooMediationAdapter.h; sourceTree = "<group>"; };
+		28BC14802A15CD450068174B /* MaticooMediationAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationAdapter.m; sourceTree = "<group>"; };
+		28BC148D2A1628650068174B /* MaticooSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaticooSDK.framework; sourceTree = "<group>"; };
+		28BE66882A36EF8E0063038B /* MaticooMediationNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationNetwork.h; sourceTree = "<group>"; };
+		28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationNetwork.m; sourceTree = "<group>"; };
 		3517A8CD27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMAXAdPlacerCollectionViewController.h; sourceTree = "<group>"; };
 		3517A8CE27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALMAXAdPlacerCollectionViewController.m; sourceTree = "<group>"; };
 		3517A8D027F76F9D0074CCDE /* ALMAXAdPlacerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMAXAdPlacerTableViewController.h; sourceTree = "<group>"; };
@@ -104,11 +112,11 @@
 		77B6F434279B51AB0063F81D /* ALMAXTemplateNativeAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMAXTemplateNativeAdViewController.h; sourceTree = "<group>"; };
 		77B6F435279B51AB0063F81D /* ALMAXManualNativeAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMAXManualNativeAdViewController.h; sourceTree = "<group>"; };
 		77B6F436279B51AB0063F81D /* ALMAXTemplateNativeAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMAXTemplateNativeAdViewController.m; sourceTree = "<group>"; };
-		8B44FAD7FD9A7F46FD47BFD5 /* Pods_AppLovin_MAX_Demo_App___ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppLovin_MAX_Demo_App___ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B44FAD7FD9A7F46FD47BFD5 /* Pods_AppLovin_MAX_Demo_App___ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_AppLovin_MAX_Demo_App___ObjC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		947968BDEB66F929BB7F3151 /* Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC.debug.xcconfig"; path = "Target Support Files/Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC/Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		C0DE8BB1234E8A86004B0CFC /* ALBaseAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALBaseAdViewController.h; sourceTree = "<group>"; };
 		C0DE8BB2234E8A86004B0CFC /* ALBaseAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALBaseAdViewController.m; sourceTree = "<group>"; };
-		D5800DCAD909EC69A12040D8 /* Pods-AppLovin MAX Demo App - ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin MAX Demo App - ObjC.release.xcconfig"; path = "Target Support Files/Pods-AppLovin MAX Demo App - ObjC/Pods-AppLovin MAX Demo App - ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		D5800DCAD909EC69A12040D8 /* Pods-AppLovin MAX Demo App - ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin MAX Demo App - ObjC.release.xcconfig"; path = "../../AppLovin-MAX-SDK-iOS/AppLovin MAX Demo App - ObjC/Pods/Target Support Files/Pods-AppLovin MAX Demo App - ObjC/Pods-AppLovin MAX Demo App - ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		DEEC21EC299EC35C002313FB /* ALMAXAppOpenAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMAXAppOpenAdViewController.h; sourceTree = "<group>"; };
 		DEEC21ED299EC35C002313FB /* ALMAXAppOpenAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMAXAppOpenAdViewController.m; sourceTree = "<group>"; };
 		E56784A523F22AB300ACA6C1 /* Rewarded.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Rewarded.storyboard; sourceTree = "<group>"; };
@@ -145,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7388F8D5496E9357FE15E578 /* Pods_AppLovin_MAX_Demo_App___ObjC.framework in Frameworks */,
+				28BC148F2A1629250068174B /* MaticooSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +244,10 @@
 				E57306F223EB91B400D972F4 /* AppLovin */,
 				1D0CB33823204EBD0076AAAA /* MAX */,
 				1D993015231FA39000C472F8 /* Supporting Files */,
+				28BC147F2A15CD450068174B /* MaticooMediationAdapter.h */,
+				28BC14802A15CD450068174B /* MaticooMediationAdapter.m */,
+				28BE66882A36EF8E0063038B /* MaticooMediationNetwork.h */,
+				28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */,
 			);
 			path = "AppLovin MAX Demo App - ObjC";
 			sourceTree = "<group>";
@@ -341,6 +354,7 @@
 		ACA5A0C2B52B3F6CBD15E78A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28BC148D2A1628650068174B /* MaticooSDK.framework */,
 				8B44FAD7FD9A7F46FD47BFD5 /* Pods_AppLovin_MAX_Demo_App___ObjC.framework */,
 			);
 			name = Frameworks;
@@ -646,11 +660,13 @@
 				C0DE8BB3234E8A86004B0CFC /* ALBaseAdViewController.m in Sources */,
 				37C7E1F62329742E002165B5 /* ALHomeViewController.m in Sources */,
 				77B6F437279B51AB0063F81D /* ALMAXManualNativeAdViewController.m in Sources */,
+				28BC14812A15CD450068174B /* MaticooMediationAdapter.m in Sources */,
 				62CD0EE5286E168E00BD03CE /* ALMAXMRecTableViewController.m in Sources */,
 				E567854523F22E1300ACA6C1 /* ALDemoRewardedVideosViewController.m in Sources */,
 				37C7E1F523297423002165B5 /* main.m in Sources */,
 				E56785EE23F3557B00ACA6C1 /* ALDemoBannerZoneViewController.m in Sources */,
 				E56785E823F3555A00ACA6C1 /* ALDemoProgrammaticBannerViewController.m in Sources */,
+				28BE668A2A36EF8E0063038B /* MaticooMediationNetwork.m in Sources */,
 				E567854623F22E1300ACA6C1 /* ALDemoRewardedVideosZoneViewController.m in Sources */,
 				3517A8CF27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m in Sources */,
 				62CD0EE8286E1C7400BD03CE /* ALMAXMRecTableViewCell.m in Sources */,
@@ -824,7 +840,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LUDVB6Z3BS;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/AppLovinSDK",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/AppLovin MAX Demo App - ObjC/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -832,7 +853,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.applovin.enterprise.apps.demoapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ym.ApplinsSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -844,7 +865,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7WXN7X228H;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/AppLovinSDK",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/AppLovin MAX Demo App - ObjC/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -852,7 +878,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.applovin.enterprise.apps.demoapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ym.ApplinsSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

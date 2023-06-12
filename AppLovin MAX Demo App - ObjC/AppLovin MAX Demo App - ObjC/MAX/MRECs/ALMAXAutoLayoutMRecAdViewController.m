@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
     
-    self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: @"YOUR_AD_UNIT_ID" adFormat: MAAdFormat.mrec];
+    self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: @"58e408bf2942240b" adFormat: MAAdFormat.mrec];
     
     self.adView.delegate = self;
     self.adView.revenueDelegate = self;

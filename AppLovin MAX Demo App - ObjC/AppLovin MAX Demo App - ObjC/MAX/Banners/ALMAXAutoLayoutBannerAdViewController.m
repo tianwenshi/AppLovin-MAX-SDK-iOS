@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
     
-    self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: @"YOUR_AD_UNIT_ID"];
+    self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: @"c794853aed0f8fe7"];
     
     self.adView.delegate = self;
     self.adView.revenueDelegate = self;
@@ -44,6 +44,7 @@
     
     // Load the first ad
     [self.adView loadAd];
+    [self.adView stopAutoRefresh];
 }
 
 #pragma mark - MAAdDelegate Protocol

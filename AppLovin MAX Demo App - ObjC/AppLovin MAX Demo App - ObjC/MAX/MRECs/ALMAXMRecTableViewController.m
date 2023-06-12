@@ -23,7 +23,7 @@
 static const NSInteger kAdViewCount = 5;
 static const NSInteger kAdInterval = 10;
 
-- (void)viewDidLoad
+- (void)viewDidLoadx
 {
     [super viewDidLoad];
     
