@@ -44,7 +44,7 @@ static NSString *logURL = @"";
 + (void)trackMediationAdRequest:(NSString*)pid adType:(NSInteger)adtype isAutoRefresh:(BOOL)isAuto{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:201],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX"}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:201],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX", @"pid":pid}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -53,7 +53,7 @@ static NSString *logURL = @"";
 + (void)trackMediationAdRequestFilled:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:205],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX"}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:205],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX", @"pid":pid}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -71,7 +71,7 @@ static NSString *logURL = @"";
 + (void)trackMediationAdImp:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:207],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX"}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:207],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX", @"pid":pid}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -80,7 +80,7 @@ static NSString *logURL = @"";
 + (void)trackMediationAdImpFailed:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:208],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX"}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:208],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX", @"pid":pid}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -89,7 +89,7 @@ static NSString *logURL = @"";
 + (void)trackMediationAdClick:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:209],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX"}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:209],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX", @"pid":pid}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];

@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<MATBannerAdDelegate> delegate;
 @property (nonatomic, strong) NSString* placementID;
 - (MATBannerAd*)initWithPlacementID:(NSString*)placementID;
-- (MATBannerAd*)initWithPlacementID:(NSString*)placementID rootViewController:(UIViewController*)viewController size:(CGSize)size;
 - (void)loadAd;
 @end
 

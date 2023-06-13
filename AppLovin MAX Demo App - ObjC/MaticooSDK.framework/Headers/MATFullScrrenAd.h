@@ -19,10 +19,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isReady;
 @property (nonatomic, strong) MATWebview *__nullable matWebview;
 @property (nonatomic, assign) BOOL isVideo;
+@property (nonatomic, strong) NSMutableDictionary* baseDictionary;
+@property (nonatomic, strong) NSString* placementID;
+@property (nonatomic, assign) BOOL isLoading;
 - (void)closeControlEvent;
 - (void)prepareCloseButton;
 - (void)presentModalView:(UIView*)view UIController:(UIViewController*) viewController;
 - (void)cacheMediaFiles:(NSArray*)mediaFiles resources:(NSArray*)resources;
+- (NSInteger)getAdType;
 @end
 
 NS_ASSUME_NONNULL_END

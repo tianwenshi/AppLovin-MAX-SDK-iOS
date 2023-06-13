@@ -13,8 +13,9 @@ typedef void (^VCDidAppear)();
 @class MATModalViewController;
 
 @protocol MATModalViewControllerDelegate <NSObject>
-
 - (void)MATModalViewControllerDidRotate:(MATModalViewController*)modalViewController;
+- (void)MATModalViewWillClose:(MATModalViewController*)modalViewController;
+- (void)MATModalViewDidClose:(MATModalViewController*)modalViewController;
 @end
 
 @interface MATModalViewController : UIViewController

@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<MATWebviewDelegate> delegate;
 - (void)loadUrl:(NSString*)url;
 - (void)dissMiss;
+- (void)playVideo;
 @end
 
 NS_ASSUME_NONNULL_END

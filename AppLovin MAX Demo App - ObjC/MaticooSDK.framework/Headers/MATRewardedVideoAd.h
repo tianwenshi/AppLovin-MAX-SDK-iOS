@@ -11,7 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol MATRewardedVideoAdDelegate;
 
 @interface MATRewardedVideoAd : MATFullScrrenAd
-@property (nonatomic, strong) NSString* placementID;
 @property (nonatomic, weak) id<MATRewardedVideoAdDelegate> delegate;
 - (MATRewardedVideoAd*)initWithPlacementID:(NSString*)placementID;
 - (void)loadAd;

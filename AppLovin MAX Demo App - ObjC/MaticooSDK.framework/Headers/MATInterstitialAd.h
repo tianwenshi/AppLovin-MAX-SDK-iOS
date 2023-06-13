@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MATInterstitialAd : MATFullScrrenAd
 @property (nonatomic, weak) id<MATInterstitialAdDelegate> delegate;
-@property (nonatomic, strong) NSString* placementID;
 - (MATInterstitialAd*)initWithPlacementID:(NSString*)placementID;
 - (void)loadAd;
 - (void)showAdFromViewController:(UIViewController*) vc;

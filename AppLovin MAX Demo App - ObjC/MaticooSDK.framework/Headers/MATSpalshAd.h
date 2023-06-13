@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MATSpalshAd : MATFullScrrenAd
 @property (nonatomic, weak) id<MATSpalshAdDelegate> delegate;
-@property (nonatomic, strong) NSString* placementID;
 - (MATSpalshAd*)initWithPlacementID:(NSString*)placementID;
 - (void)loadAd;
 - (void)showAdFromViewController:(UIViewController*) vc;
