@@ -92,6 +92,39 @@
     return ADAPTER_VERSION;
 }
 
++ (MAAdapterError *)toMaxError:(NSError *)maticooError
+{
+    NSInteger maticooErrorCode = maticooError.code;
+    MAAdapterError *adapterError = MAAdapterError.unspecified;
+    switch ( maticooErrorCode )
+    {
+        case 1000: // Network Error
+            adapterError = MAAdapterError.noConnection;
+            break;
+        case 1001: // No Fill
+            adapterError = MAAdapterError.noFill;
+            break;
+        case 106:
+            adapterError = MAAdapterError.invalidLoadState;
+            break;
+        case 104:
+            adapterError = MAAdapterError.invalidConfiguration;
+            break;
+        case 107:
+            adapterError = MAAdapterError.adDisplayFailedError;
+            break;
+    }
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    return [MAAdapterError errorWithCode: adapterError.errorCode
+                             errorString: adapterError.errorMessage
+                  thirdPartySdkErrorCode: maticooErrorCode
+               thirdPartySdkErrorMessage: maticooError.localizedDescription];
+#pragma clang diagnostic pop
+}
+
+
 #pragma mark - MAInterstitialAdapter Methods
 
 - (void)loadInterstitialAdForParameters:(id<MAAdapterResponseParameters>)parameters andNotify:(id<MAInterstitialAdapterDelegate>)delegate
@@ -295,13 +328,15 @@
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd didFailWithError:(NSError *)error{
     NSLog(@"interstitialAd didFailWithError, %@, %@", interstitialAd.placementID, error.description);
     [MaticooMediationTrackManager trackMediationAdRequestFailed:interstitialAd.placementID adType:INTERSTITIAL];
-    MAAdapterError *adapterError = nil;
+    MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
     [self.delegate didFailToLoadInterstitialAdWithError: adapterError];
 }
 
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd displayFailWithError:(NSError *)error{
     NSLog(@"interstitialAd displayFailWithError, %@", error.description);
     [MaticooMediationTrackManager trackMediationAdImpFailed:interstitialAd.placementID adType:INTERSTITIAL];
+    MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
+    [self.delegate didFailToDisplayInterstitialAdWithError:adapterError];
 }
 
 - (void)interstitialAdWillLogImpression:(MATInterstitialAd *)interstitialAd{
@@ -350,7 +385,7 @@
 
 - (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error{
     [MaticooMediationTrackManager trackMediationAdRequestFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
-    MAAdapterError *adapterError = nil;
+    MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
     [self.parentAdapter log: @"Rewarded ad (%@) failed to load with error: %@", rewardedVideoAd.placementID, adapterError];
     [self.delegate didFailToLoadRewardedAdWithError: adapterError];
 }
@@ -358,7 +393,8 @@
 - (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd displayFailWithError:(NSError *)error{
     [MaticooMediationTrackManager trackMediationAdImpFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
     [self.parentAdapter log: @"Rewarded video displayFailWithError: %@", rewardedVideoAd.placementID];
-    [self.delegate didFailToDisplayRewardedAdWithError: MAAdapterError.adDisplayFailedError];
+    MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
+    [self.delegate didFailToDisplayRewardedAdWithError: adapterError];
 }
 
 - (void)rewardedVideoAdStarted:(MATRewardedVideoAd *)rewardedVideoAd{
@@ -422,7 +458,7 @@
 
 - (void)bannerAd:(nonnull MATBannerAd *)bannerAd didFailWithError:(nonnull NSError *)error {
     [MaticooMediationTrackManager trackMediationAdRequestFailed:bannerAd.placementID adType:BANNER];
-    MAAdapterError *adapterError = nil;
+    MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
     [self.parentAdapter log: @"Banner (%@) failed to load with error: %@", bannerAd.placementID, adapterError];
     [self.delegate didFailToLoadAdViewAdWithError: adapterError];
 }
