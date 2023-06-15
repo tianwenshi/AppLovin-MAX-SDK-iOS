@@ -17,7 +17,7 @@ struct ALMAXSwiftUIBannerAdView: View
     
     var body: some View {
         VStack {
-            MAAdViewSwiftUIWrapper(adUnitIdentifier: "YOUR_AD_UNIT_ID",
+            MAAdViewSwiftUIWrapper(adUnitIdentifier: "c794853aed0f8fe7",
                                    adFormat: .banner,
                                    sdk: ALSdk.shared()!,
                                    didLoad: viewModel.didLoad,
