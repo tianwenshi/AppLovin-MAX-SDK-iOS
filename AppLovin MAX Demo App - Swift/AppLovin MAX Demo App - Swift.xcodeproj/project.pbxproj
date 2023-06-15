@@ -20,6 +20,11 @@
 		1DDCE5A1242AE564007EAC8D /* ALMAXInterstitialAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCE59C242AE564007EAC8D /* ALMAXInterstitialAdViewController.swift */; };
 		1DDCE5A5242AE5CE007EAC8D /* ALHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCE5A3242AE5CE007EAC8D /* ALHomeViewController.swift */; };
 		1DDCE5A6242AE5CE007EAC8D /* ALBaseAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCE5A4242AE5CE007EAC8D /* ALBaseAdViewController.swift */; };
+		28BE669D2A3B345E0063038B /* MaticooMediationTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE66952A3B345C0063038B /* MaticooMediationTrackManager.m */; };
+		28BE669E2A3B345E0063038B /* MaticooMediationNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE66962A3B345C0063038B /* MaticooMediationNetwork.m */; };
+		28BE669F2A3B345E0063038B /* MaticooMediationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE669A2A3B345D0063038B /* MaticooMediationAdapter.m */; };
+		28BE66A02A3B345E0063038B /* MaticooMediationURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE669C2A3B345E0063038B /* MaticooMediationURLSession.m */; };
+		28BE66A22A3B35420063038B /* MaticooSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BE66A12A3B35420063038B /* MaticooSDK.framework */; };
 		35C0C88227F79C820030B2F8 /* ALMAXAdPlacerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C0C88127F79C820030B2F8 /* ALMAXAdPlacerTableViewController.swift */; };
 		35C0C88427F79C910030B2F8 /* ALMAXAdPlacerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C0C88327F79C910030B2F8 /* ALMAXAdPlacerCollectionViewController.swift */; };
 		35C0C88627F79E090030B2F8 /* ALTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C0C88527F79E090030B2F8 /* ALTextCollectionViewCell.swift */; };
@@ -72,7 +77,16 @@
 		1DDCE59C242AE564007EAC8D /* ALMAXInterstitialAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALMAXInterstitialAdViewController.swift; sourceTree = "<group>"; };
 		1DDCE5A3242AE5CE007EAC8D /* ALHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALHomeViewController.swift; sourceTree = "<group>"; };
 		1DDCE5A4242AE5CE007EAC8D /* ALBaseAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALBaseAdViewController.swift; sourceTree = "<group>"; };
-		327A5740B44E574F21A6720C /* Pods-AppLovin MAX Demo App - Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin MAX Demo App - Swift.release.xcconfig"; path = "Target Support Files/Pods-AppLovin MAX Demo App - Swift/Pods-AppLovin MAX Demo App - Swift.release.xcconfig"; sourceTree = "<group>"; };
+		28BE66952A3B345C0063038B /* MaticooMediationTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaticooMediationTrackManager.m; path = "../AppLovin MAX Demo App - ObjC/AppLovin MAX Demo App - ObjC/MaticooMediationTrackManager.m"; sourceTree = "<group>"; };
+		28BE66962A3B345C0063038B /* MaticooMediationNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaticooMediationNetwork.m; path = "../AppLovin MAX Demo App - ObjC/AppLovin MAX Demo App - ObjC/MaticooMediationNetwork.m"; sourceTree = "<group>"; };
+		28BE66972A3B345D0063038B /* MaticooMediationURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaticooMediationURLSession.h; path = "../AppLovin MAX Demo App - ObjC/AppLovin MAX Demo App - ObjC/MaticooMediationURLSession.h"; sourceTree = "<group>"; };
+		28BE66982A3B345D0063038B /* MaticooMediationTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaticooMediationTrackManager.h; path = "../AppLovin MAX Demo App - ObjC/AppLovin MAX Demo App - ObjC/MaticooMediationTrackManager.h"; sourceTree = "<group>"; };
+		28BE66992A3B345D0063038B /* MaticooMediationAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaticooMediationAdapter.h; path = "../AppLovin MAX Demo App - ObjC/AppLovin MAX Demo App - ObjC/MaticooMediationAdapter.h"; sourceTree = "<group>"; };
+		28BE669A2A3B345D0063038B /* MaticooMediationAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaticooMediationAdapter.m; path = "../AppLovin MAX Demo App - ObjC/AppLovin MAX Demo App - ObjC/MaticooMediationAdapter.m"; sourceTree = "<group>"; };
+		28BE669B2A3B345E0063038B /* MaticooMediationNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaticooMediationNetwork.h; path = "../AppLovin MAX Demo App - ObjC/AppLovin MAX Demo App - ObjC/MaticooMediationNetwork.h"; sourceTree = "<group>"; };
+		28BE669C2A3B345E0063038B /* MaticooMediationURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaticooMediationURLSession.m; path = "../AppLovin MAX Demo App - ObjC/AppLovin MAX Demo App - ObjC/MaticooMediationURLSession.m"; sourceTree = "<group>"; };
+		28BE66A12A3B35420063038B /* MaticooSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaticooSDK.framework; sourceTree = "<group>"; };
+		327A5740B44E574F21A6720C /* Pods-AppLovin MAX Demo App - Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin MAX Demo App - Swift.release.xcconfig"; path = "../../AppLovin-MAX-SDK-iOS/AppLovin MAX Demo App - Swift/Pods/Target Support Files/Pods-AppLovin MAX Demo App - Swift/Pods-AppLovin MAX Demo App - Swift.release.xcconfig"; sourceTree = "<group>"; };
 		35C0C88127F79C820030B2F8 /* ALMAXAdPlacerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALMAXAdPlacerTableViewController.swift; sourceTree = "<group>"; };
 		35C0C88327F79C910030B2F8 /* ALMAXAdPlacerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALMAXAdPlacerCollectionViewController.swift; sourceTree = "<group>"; };
 		35C0C88527F79E090030B2F8 /* ALTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALTextCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -95,9 +109,9 @@
 		77B6F43A279B51F70063F81D /* ALMAXManualNativeAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALMAXManualNativeAdViewController.swift; sourceTree = "<group>"; };
 		77B6F43B279B51F70063F81D /* ALMAXTemplateNativeAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALMAXTemplateNativeAdViewController.swift; sourceTree = "<group>"; };
 		77B6F440279B52050063F81D /* NativeManualAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeManualAdView.xib; sourceTree = "<group>"; };
-		A49BD6F0C5004760192CA0D3 /* Pods-AppLovin MAX Demo App - Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin MAX Demo App - Swift.debug.xcconfig"; path = "Target Support Files/Pods-AppLovin MAX Demo App - Swift/Pods-AppLovin MAX Demo App - Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		A49BD6F0C5004760192CA0D3 /* Pods-AppLovin MAX Demo App - Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin MAX Demo App - Swift.debug.xcconfig"; path = "../../AppLovin-MAX-SDK-iOS/AppLovin MAX Demo App - Swift/Pods/Target Support Files/Pods-AppLovin MAX Demo App - Swift/Pods-AppLovin MAX Demo App - Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		C395ACD57CFF0746B2DE19C2 /* Pods-Non-Mediated Projects-AppLovin MAX Demo App - Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Non-Mediated Projects-AppLovin MAX Demo App - Swift.release.xcconfig"; path = "Target Support Files/Pods-Non-Mediated Projects-AppLovin MAX Demo App - Swift/Pods-Non-Mediated Projects-AppLovin MAX Demo App - Swift.release.xcconfig"; sourceTree = "<group>"; };
-		C9AD48B42EE79CDEA120A731 /* Pods_AppLovin_MAX_Demo_App___Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppLovin_MAX_Demo_App___Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9AD48B42EE79CDEA120A731 /* Pods_AppLovin_MAX_Demo_App___Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_AppLovin_MAX_Demo_App___Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEC21F0299EC36F002313FB /* ALMAXAppOpenAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALMAXAppOpenAdViewController.swift; sourceTree = "<group>"; };
 		E5BDBDF42432C4E800F82D79 /* ALDemoInterstitialBasicIntegrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterstitialBasicIntegrationViewController.swift; sourceTree = "<group>"; };
 		E5BDBDF52432C4E800F82D79 /* ALDemoInterstitialZoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterstitialZoneViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BE66A22A3B35420063038B /* MaticooSDK.framework in Frameworks */,
 				0F59AFEA2C1B64BF96C40680 /* Pods_AppLovin_MAX_Demo_App___Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +195,14 @@
 			isa = PBXGroup;
 			children = (
 				E5BDBFEF2435197700F82D79 /* AppLovin MAX Demo App-Bridging-Header.h */,
+				28BE66992A3B345D0063038B /* MaticooMediationAdapter.h */,
+				28BE669A2A3B345D0063038B /* MaticooMediationAdapter.m */,
+				28BE669B2A3B345E0063038B /* MaticooMediationNetwork.h */,
+				28BE66962A3B345C0063038B /* MaticooMediationNetwork.m */,
+				28BE66982A3B345D0063038B /* MaticooMediationTrackManager.h */,
+				28BE66952A3B345C0063038B /* MaticooMediationTrackManager.m */,
+				28BE66972A3B345D0063038B /* MaticooMediationURLSession.h */,
+				28BE669C2A3B345E0063038B /* MaticooMediationURLSession.m */,
 				3763B23523357C4B00E49783 /* AppLovin MAX Demo App - Swift */,
 				3763B23423357C4B00E49783 /* Products */,
 				7CDCB641AA96688D84385A62 /* Pods */,
@@ -254,6 +277,7 @@
 		47C548B6FFA12425795CF4C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28BE66A12A3B35420063038B /* MaticooSDK.framework */,
 				C9AD48B42EE79CDEA120A731 /* Pods_AppLovin_MAX_Demo_App___Swift.framework */,
 			);
 			name = Frameworks;
@@ -512,10 +536,13 @@
 				E5BDBE852433F4FF00F82D79 /* ALDemoInterfaceBuilderBannerViewController.swift in Sources */,
 				1DDCE5A1242AE564007EAC8D /* ALMAXInterstitialAdViewController.swift in Sources */,
 				E5BDBE8C243404D100F82D79 /* ALDemoInterfaceBuilderLeaderViewController.swift in Sources */,
+				28BE669F2A3B345E0063038B /* MaticooMediationAdapter.m in Sources */,
 				35C0C88627F79E090030B2F8 /* ALTextCollectionViewCell.swift in Sources */,
+				28BE669E2A3B345E0063038B /* MaticooMediationNetwork.m in Sources */,
 				77B6F43E279B51F70063F81D /* ALMAXTemplateNativeAdViewController.swift in Sources */,
 				1055D8A32984A18700228C1B /* MAAdViewSwiftUIWrapper.swift in Sources */,
 				5BCB21D227445E46007218B2 /* ALDemoMRecProgrammaticViewController.swift in Sources */,
+				28BE669D2A3B345E0063038B /* MaticooMediationTrackManager.m in Sources */,
 				E5BDBE862433F4FF00F82D79 /* ALDemoBannerZoneViewController.swift in Sources */,
 				E5BDBE8B243404D100F82D79 /* ALDemoProgrammaticLeaderViewController.swift in Sources */,
 				37B6CED2246DEAE00068A6A4 /* ALMAXAutoLayoutMRecAdViewController.swift in Sources */,
@@ -532,6 +559,7 @@
 				1055D8A72984A1A200228C1B /* ALMAXSwiftUIMRecAdView.swift in Sources */,
 				37C4D0E8233D834900096894 /* main.swift in Sources */,
 				37B6CECE246DE9FF0068A6A4 /* ALMAXFrameLayoutMRecAdViewController.swift in Sources */,
+				28BE66A02A3B345E0063038B /* MaticooMediationURLSession.m in Sources */,
 				35C0C88227F79C820030B2F8 /* ALMAXAdPlacerTableViewController.swift in Sources */,
 				1055D8A52984A19400228C1B /* ALMAXSwiftUIMRecAdViewController.swift in Sources */,
 				77AAC0F727D806820060499A /* ALMAXManualNativeLateBindingAdViewController.swift in Sources */,
@@ -701,7 +729,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LUDVB6Z3BS;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/AppLovin MAX Demo App - Swift/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -710,7 +742,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.applovin.enterprise.apps.demoapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ym.ApplinsSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "AppLovin MAX Demo App-Bridging-Header.h";
@@ -728,7 +760,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LUDVB6Z3BS;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/AppLovin MAX Demo App - Swift/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -737,7 +773,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.applovin.enterprise.apps.demoapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ym.ApplinsSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "AppLovin MAX Demo App-Bridging-Header.h";

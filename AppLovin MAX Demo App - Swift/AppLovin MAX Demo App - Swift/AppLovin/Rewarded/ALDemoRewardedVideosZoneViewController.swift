@@ -17,7 +17,7 @@ class ALDemoRewardedVideosZoneViewController : ALBaseAdViewController
     {
         super.viewDidLoad();
         
-        incentivizedInterstitial = ALIncentivizedInterstitialAd(zoneIdentifier: "YOUR_ZONE_ID")
+        incentivizedInterstitial = ALIncentivizedInterstitialAd(zoneIdentifier: "18ab282f665f743a")
     }
     
     // You need to preload each rewarded video before it can be displayed

@@ -19,7 +19,7 @@ class ALDemoInterstitialZoneViewController : ALBaseAdViewController
     @IBAction func loadInterstitial(_ sender: AnyObject!)
     {
         logCallback()
-        ALSdk.shared()?.adService.loadNextAd(forZoneIdentifier: "YOUR_ZONE_ID", andNotify: self)
+        ALSdk.shared()?.adService.loadNextAd(forZoneIdentifier: "187a32c5072728db", andNotify: self)
     }
     
     @IBAction func showInterstitial(_ sender: AnyObject!)

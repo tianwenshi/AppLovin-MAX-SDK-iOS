@@ -13,7 +13,7 @@ class ALDemoBannerZoneViewController : ALBaseAdViewController
 {
     let kBannerHeight: CGFloat = 50
     
-    private let adView = ALAdView(size: ALAdSize.banner, zoneIdentifier: "YOUR_ZONE_ID")
+    private let adView = ALAdView(size: ALAdSize.banner, zoneIdentifier: "18ab282f665f743a")
     @IBOutlet weak var loadButton: UIBarButtonItem!
     
     // MARK: View Lifecycle
