@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackMediationAdImp:(NSString*)pid adType:(NSInteger)adtype;
 + (void)trackMediationAdImpFailed:(NSString*)pid adType:(NSInteger)adtype;
 + (void)trackMediationAdClick:(NSString*)pid adType:(NSInteger)adtype;
++ (void)trackMediationAdShow:(NSString*)pid adType:(NSInteger)adtype;
 @end
 
 NS_ASSUME_NONNULL_END

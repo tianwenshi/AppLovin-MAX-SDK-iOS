@@ -142,7 +142,7 @@
 - (void)showInterstitialAdForParameters:(id<MAAdapterResponseParameters>)parameters andNotify:(id<MAInterstitialAdapterDelegate>)delegate
 {
     [self log: @"Showing interstitial: %@...", parameters.thirdPartyAdPlacementIdentifier];
-
+    [MaticooMediationTrackManager trackMediationAdShow:parameters.thirdPartyAdPlacementIdentifier adType:INTERSTITIAL];
     // Check if ad is already expired or invalidated, and do not show ad if that is the case. You will not get paid to show an invalidated ad.
     if (self.interstitial.isReady){
         [self.interstitial showAdFromRootViewController];
@@ -181,7 +181,7 @@
 - (void)showRewardedAdForParameters:(id<MAAdapterResponseParameters>)parameters andNotify:(id<MARewardedAdapterDelegate>)delegate
 {
     [self log: @"Showing rewarded ad: %@...", parameters.thirdPartyAdPlacementIdentifier];
-    
+    [MaticooMediationTrackManager trackMediationAdShow:parameters.thirdPartyAdPlacementIdentifier adType:REWARDEDVIDEO];
     // Check if ad is already expired or invalidated, and do not show ad if that is the case. You will not get paid to show an invalidated ad.
     if ( [self.rewardedVideoAd isReady] )
     {
