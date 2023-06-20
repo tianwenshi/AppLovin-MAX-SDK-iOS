@@ -9,7 +9,7 @@
 #import "MaticooMediationAdapter.h"
 #import "MaticooMediationTrackManager.h"
 #define ADAPTER_VERSION @"1.0.0"
-#define SDK_VERSION @"1.0.0"
+#define SDK_VERSION @"1.1.0"
 
 @interface ALMaticooMediationAdapterInterstitialAdDelegate : NSObject <MATInterstitialAdDelegate>
 @property (nonatomic,   weak) MaticooMediationAdapter *parentAdapter;
