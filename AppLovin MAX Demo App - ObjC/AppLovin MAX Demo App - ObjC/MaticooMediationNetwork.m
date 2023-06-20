@@ -23,7 +23,7 @@
 
 + (id)POST:(NSString *)path parameters:(NSDictionary *)params completeHandle:(void (^)(id responseObj, NSError* error))complete
 {
-    NSLog(params.description);
+//    NSLog(params.description);
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:path]];
     
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -59,7 +59,7 @@
     return [session POST:request completeHandler:^(id responseObj, NSError *error) {
         if (error)
         {
-            NSLog(error.description);
+//            NSLog(error.description);
             complete(responseObj,error);
         }
         else
