@@ -11,10 +11,10 @@
 		1D992FE8231FA1C500C472F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D992FE7231FA1C500C472F8 /* Assets.xcassets */; };
 		1D992FEB231FA1C500C472F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D992FE9231FA1C500C472F8 /* LaunchScreen.storyboard */; };
 		28BC14812A15CD450068174B /* MaticooMediationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC14802A15CD450068174B /* MaticooMediationAdapter.m */; };
-		28BC148F2A1629250068174B /* MaticooSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BC148D2A1628650068174B /* MaticooSDK.framework */; };
 		28BE668A2A36EF8E0063038B /* MaticooMediationNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */; };
 		28BE668D2A36F0140063038B /* MaticooMediationURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE668C2A36F0140063038B /* MaticooMediationURLSession.m */; };
 		28BE66902A36FAD60063038B /* MaticooMediationTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE668F2A36FAD60063038B /* MaticooMediationTrackManager.m */; };
+		28BE66922A39D2DF0063038B /* MaticooSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BE66912A39D2DF0063038B /* MaticooSDK.framework */; };
 		3517A8CF27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517A8CE27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m */; };
 		3517A8D227F76F9D0074CCDE /* ALMAXAdPlacerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517A8D127F76F9D0074CCDE /* ALMAXAdPlacerTableViewController.m */; };
 		35C0C88027F786A50030B2F8 /* ALTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C0C87F27F786A50030B2F8 /* ALTextCollectionViewCell.m */; };
@@ -79,13 +79,13 @@
 		1D992FED231FA1C500C472F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28BC147F2A15CD450068174B /* MaticooMediationAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooMediationAdapter.h; sourceTree = "<group>"; };
 		28BC14802A15CD450068174B /* MaticooMediationAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationAdapter.m; sourceTree = "<group>"; };
-		28BC148D2A1628650068174B /* MaticooSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaticooSDK.framework; sourceTree = "<group>"; };
 		28BE66882A36EF8E0063038B /* MaticooMediationNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationNetwork.h; sourceTree = "<group>"; };
 		28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationNetwork.m; sourceTree = "<group>"; };
 		28BE668B2A36F0140063038B /* MaticooMediationURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationURLSession.h; sourceTree = "<group>"; };
 		28BE668C2A36F0140063038B /* MaticooMediationURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationURLSession.m; sourceTree = "<group>"; };
 		28BE668E2A36FAD60063038B /* MaticooMediationTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationTrackManager.h; sourceTree = "<group>"; };
 		28BE668F2A36FAD60063038B /* MaticooMediationTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationTrackManager.m; sourceTree = "<group>"; };
+		28BE66912A39D2DF0063038B /* MaticooSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaticooSDK.framework; sourceTree = "<group>"; };
 		3517A8CD27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMAXAdPlacerCollectionViewController.h; sourceTree = "<group>"; };
 		3517A8CE27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALMAXAdPlacerCollectionViewController.m; sourceTree = "<group>"; };
 		3517A8D027F76F9D0074CCDE /* ALMAXAdPlacerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMAXAdPlacerTableViewController.h; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BE66922A39D2DF0063038B /* MaticooSDK.framework in Frameworks */,
 				7388F8D5496E9357FE15E578 /* Pods_AppLovin_MAX_Demo_App___ObjC.framework in Frameworks */,
-				28BC148F2A1629250068174B /* MaticooSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +364,7 @@
 		ACA5A0C2B52B3F6CBD15E78A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				28BC148D2A1628650068174B /* MaticooSDK.framework */,
+				28BE66912A39D2DF0063038B /* MaticooSDK.framework */,
 				8B44FAD7FD9A7F46FD47BFD5 /* Pods_AppLovin_MAX_Demo_App___ObjC.framework */,
 			);
 			name = Frameworks;
@@ -852,20 +852,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				DEVELOPMENT_TEAM = 32Z4FX6L9H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/AppLovinSDK",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/AppLovin MAX Demo App - ObjC/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ym.ApplinsSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ym.game.parkingking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -877,20 +877,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				DEVELOPMENT_TEAM = 32Z4FX6L9H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/AppLovinSDK",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/AppLovin MAX Demo App - ObjC/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ym.ApplinsSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ym.game.parkingking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

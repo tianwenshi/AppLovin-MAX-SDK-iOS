@@ -23,7 +23,7 @@
 {
     [super viewDidLoad];
     
-    self.rewardedAd = [MARewardedAd sharedWithAdUnitIdentifier: @"18ab282f665f743a"];
+    self.rewardedAd = [MARewardedAd sharedWithAdUnitIdentifier: @"9f8c42d1d82f1501"];
     
     self.rewardedAd.delegate = self;
     self.rewardedAd.revenueDelegate = self;

@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
     
-    self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: @"187a32c5072728db"];
+    self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: @"24b6de3721320530"];
     
     self.interstitialAd.delegate = self;
     self.interstitialAd.revenueDelegate = self;
