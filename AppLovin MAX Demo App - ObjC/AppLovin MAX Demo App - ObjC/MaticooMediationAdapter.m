@@ -231,7 +231,6 @@
         self.adViewAdapterDelegate = [[ALMaticooMediationAdapterAdViewDelegate alloc] initWithParentAdapter: self andNotify: delegate];
         self.bannerAdView.delegate = self.adViewAdapterDelegate;
         [self.bannerAdView loadAd];
-        self.bannerAdView.frame = CGRectMake(0, 0, adSize.width, adSize.height);
     }
 }
 
@@ -467,7 +466,6 @@
     [MaticooMediationTrackManager trackMediationAdClick:bannerAd.placementID adType:BANNER];
     [self.parentAdapter log: @"Banner clicked: %@", bannerAd.placementID];
     [self.delegate didClickAdViewAd];
-    [self.delegate didExpandAdViewAd];
 }
 
 - (void)bannerAdDidImpression:(nonnull MATBannerAd *)bannerAd {
@@ -493,7 +491,6 @@
     [MaticooMediationTrackManager trackMediationAdClick:nativeAd.placementID adType:NATIVE];
     [self.parentAdapter log: @"Native clicked: %@", nativeAd.placementID];
     [self.delegate didClickAdViewAd];
-    [self.delegate didExpandAdViewAd];
 }
 
 - (void)nativeAdClosed:(nonnull MATNativeAd *)nativeAd {
