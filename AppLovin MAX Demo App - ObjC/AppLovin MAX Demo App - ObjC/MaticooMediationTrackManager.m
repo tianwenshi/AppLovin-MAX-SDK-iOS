@@ -97,7 +97,7 @@ static NSString *idfa = @"";
 + (void)trackMediationAdRequestFailed:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:206],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX",@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:206],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"adapter_flat":@"MAX", @"pid":pid,@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
