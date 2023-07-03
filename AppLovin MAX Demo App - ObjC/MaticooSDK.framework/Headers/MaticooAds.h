@@ -19,18 +19,32 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shareSDK;
 
 /**
- Get Applins AD Config in Appdelegate(didFinishLaunchingWithOptions:)
-
  @param appKey Appkey
  */
-- (void)initSDK:(NSString *)appKey onSuccess:(void(^)(void))success onError:(void(^)(NSError* error))errorcb;
 
+- (void)initSDK:(NSString *)appKey onSuccess:(void(^)(void))success onError:(void(^)(NSError* error))errorcb;
+/**
+ * If set to TRUE, the server will not display personalized ads based on the user's personal information.
+ * When receiving the user's request, and will not synchronize the user's information to other third-party partners.
+ * Default is FALSE.
+ * @param status 
+ */
+
+-(void)setDoNotTrackStatus:(BOOL) status;
+
+-(void)setConsentStatus:(BOOL) status;
+
+-(void)setIsAgeRestrictedUser:(BOOL) status;
 
 -(BOOL)verifyPlacementID:(NSString*)placementID;
 
 -(id)getPlacement:(NSString*) placementId;
 
 -(BOOL)isInitSuccess;
+
+-(id)getPlsInstance:(NSString*) placementId;
+
+-(void)addPlsInstance:(NSString*) placementId object:(NSObject*)obj;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -71,6 +71,35 @@
 {
     NSString *appKey = [parameters.serverParameters al_stringForKey: @"app_id"];
     NSLog(@"Initializing Maticoo SDK with app key: %@...", appKey);
+    
+    BOOL hasUserConsent = ALPrivacySettings.hasUserConsent;
+    BOOL hasUserConsentSet = ALPrivacySettings.isUserConsentSet;
+    if (hasUserConsentSet){
+        if ( hasUserConsent )
+        {
+            [[MaticooAds shareSDK] setConsentStatus:hasUserConsent];
+        }
+    }
+
+    BOOL isAgeRestrictedUser = ALPrivacySettings.isAgeRestrictedUser;
+    BOOL isAgeRestrictedUserSet = ALPrivacySettings.isAgeRestrictedUserSet;
+    if (isAgeRestrictedUserSet){
+        if ( isAgeRestrictedUser )
+        {
+            [[MaticooAds shareSDK] setIsAgeRestrictedUser:isAgeRestrictedUser];
+        }
+    }
+
+    
+    BOOL isDoNotSell = ALPrivacySettings.isDoNotSell;
+    BOOL isDoNotSellSet = ALPrivacySettings.isDoNotSellSet;
+    if (isDoNotSellSet){
+        if ( isDoNotSell )
+        {
+            [[MaticooAds shareSDK] setDoNotTrackStatus:isDoNotSell];
+        }
+    }
+    
     // Override point for customization after application launch.
     completionHandler(MAAdapterInitializationStatusDoesNotApply, nil);
     [[MaticooAds shareSDK] initSDK:appKey onSuccess:^() {

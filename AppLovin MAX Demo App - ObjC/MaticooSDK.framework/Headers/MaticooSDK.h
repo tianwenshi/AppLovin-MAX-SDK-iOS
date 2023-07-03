@@ -14,7 +14,7 @@
 #import "MATInteractAd.h"
 #import "MATInterstitialAd.h"
 #import "MATRewardedVideoAd.h"
-#import "MATSpalshAd.h"
+#import "MATSplashAd.h"
 
 #endif /* MaticooSDK_h */
 

@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		otCZF7iUbuFNrX0C+fx1wei5BhY=
+		</data>
 		<key>Headers/MATAdModel.h</key>
 		<data>
 		/FYEY9cCqD0Q0/YVCHzNoyYtsgU=
@@ -14,7 +18,7 @@
 		</data>
 		<key>Headers/MATFullScrrenAd.h</key>
 		<data>
-		TYztEYt+QmVEa50bHRwqhr+uFYI=
+		PhxDUFOTswxXj/vhfQK51dQfwo0=
 		</data>
 		<key>Headers/MATInteractAd.h</key>
 		<data>
@@ -36,17 +40,17 @@
 		<data>
 		aS1AIVmvwC/G3KIu5qI+Zv9cZuo=
 		</data>
-		<key>Headers/MATSpalshAd.h</key>
+		<key>Headers/MATSplashAd.h</key>
 		<data>
-		nP3Miz17/QILzzdJpZ0KzIQ71sI=
+		UUoDSaaE2nWGQSXrtljT2bQzIro=
 		</data>
 		<key>Headers/MATWebview.h</key>
 		<data>
-		H5e2BlKsZiiLd8AakMTd3kH+AD8=
+		lyKe6t5sxRhwjugORFdDjmxMWm8=
 		</data>
 		<key>Headers/MaticooAds.h</key>
 		<data>
-		TJVtpPweSpaqJ51VncRvNL/VxBw=
+		W1tltVCl2vaQsXj2cPCqhEhB64k=
 		</data>
 		<key>Headers/MaticooError.h</key>
 		<data>
@@ -54,11 +58,11 @@
 		</data>
 		<key>Headers/MaticooSDK.h</key>
 		<data>
-		VTGcaMu5h4zFGbWJHDHaxYsZuOw=
+		2RDIfzqNJibqLFI/VAHbYJzaOQY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		giqXJV7TBSz59v3qLKp2ulToTqo=
+		fgA/HklYWm1Po50FFpxWlfu7e2E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -102,7 +106,7 @@
 		</data>
 		<key>PrivateHeaders/MATPolicy.h</key>
 		<data>
-		PGWQo7aOxkpZrv5+KWhLGKEyxQE=
+		wS4ibRpGQxdZxFTxEa9jK4FliI8=
 		</data>
 		<key>PrivateHeaders/MATPropertyConst.h</key>
 		<data>
@@ -126,7 +130,7 @@
 		</data>
 		<key>PrivateHeaders/MATTrackManager.h</key>
 		<data>
-		lkpDsb5zJo0xLdzNPGxs8TX7SjY=
+		y2M8vCv40h33pqedQpFfndkhYws=
 		</data>
 		<key>PrivateHeaders/MATURLSessionNet.h</key>
 		<data>
@@ -177,11 +181,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TYztEYt+QmVEa50bHRwqhr+uFYI=
+			PhxDUFOTswxXj/vhfQK51dQfwo0=
 			</data>
 			<key>hash2</key>
 			<data>
-			h3pkZQBES590Zjq9CUnGbutPeJhyJYSyukfoGvc+gME=
+			/AQPgwOxpEbqXKY8sYjtHv81POf8jdfPnP/ilmoIUK8=
 			</data>
 		</dict>
 		<key>Headers/MATInteractAd.h</key>
@@ -239,37 +243,37 @@
 			VRhoWawZn3Zh77604OG6bS9At+GV/noR5uXn8iuoJSo=
 			</data>
 		</dict>
-		<key>Headers/MATSpalshAd.h</key>
+		<key>Headers/MATSplashAd.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nP3Miz17/QILzzdJpZ0KzIQ71sI=
+			UUoDSaaE2nWGQSXrtljT2bQzIro=
 			</data>
 			<key>hash2</key>
 			<data>
-			jnSqDTJAx7NgBNZ7A1OVEhimsiUYX1MuoClkwy56GHk=
+			Vv6hB7WpbNkDGTG1SDc3Xaf2GXBymj92zrVC7/BVTNE=
 			</data>
 		</dict>
 		<key>Headers/MATWebview.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H5e2BlKsZiiLd8AakMTd3kH+AD8=
+			lyKe6t5sxRhwjugORFdDjmxMWm8=
 			</data>
 			<key>hash2</key>
 			<data>
-			HUH9eMKNZ1Z+gokjv0m5acjowDXBXKlq/UgqQrZM95Q=
+			RSeM2biI+WdAVtDVUuAxTCvJivT8sieHLSsKA8Al9gA=
 			</data>
 		</dict>
 		<key>Headers/MaticooAds.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TJVtpPweSpaqJ51VncRvNL/VxBw=
+			W1tltVCl2vaQsXj2cPCqhEhB64k=
 			</data>
 			<key>hash2</key>
 			<data>
-			CiEE4w+8ORp/rYSkRbsC1Rv9kKWUHfzik9DX0Ob7qr8=
+			WLLdw2oINwS+7XxZoZDQx1cSFzi6ZpqQJsBuPAYRAm0=
 			</data>
 		</dict>
 		<key>Headers/MaticooError.h</key>
@@ -287,11 +291,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VTGcaMu5h4zFGbWJHDHaxYsZuOw=
+			2RDIfzqNJibqLFI/VAHbYJzaOQY=
 			</data>
 			<key>hash2</key>
 			<data>
-			EPa7Sa6hTHxQ7mW583kbV5uZhp9yjPjb2QsPVS1B/SI=
+			wDR5ehxdNqcOsw5+/mflcqiMR3gES27J8/wCFPDfqp4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -408,11 +412,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PGWQo7aOxkpZrv5+KWhLGKEyxQE=
+			wS4ibRpGQxdZxFTxEa9jK4FliI8=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ptl4bS7PxK5VcODfRsp7fAlT6mG1MvXzwU4DZ2Kkco8=
+			6RviuVU6mHTtWIZ5zIsLXsMX09Cm2ZYXpai+eR9f90o=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATPropertyConst.h</key>
@@ -474,11 +478,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lkpDsb5zJo0xLdzNPGxs8TX7SjY=
+			y2M8vCv40h33pqedQpFfndkhYws=
 			</data>
 			<key>hash2</key>
 			<data>
-			Mby/oBMKhtkOBWdnP/F8zx4BKdsWNfTTqb5AiBCiakE=
+			pjd3mFcuo98WFKkX2vqTMiG3lsnmezIkXlg+FirOS3M=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATURLSessionNet.h</key>

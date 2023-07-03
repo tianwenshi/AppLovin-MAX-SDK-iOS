@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 //js
 - (void)webviewLoadSuccess;
 - (void)webviewJsLoadSuccess;
-- (void)webviewLoadFailed;
+- (void)webviewLoadFailed:(NSString*)msg;
 - (void)webviewVideoImp;
 - (void)webviewVideoCompleted;
 - (void)webviewVideoClick:(NSString*)position;
@@ -27,9 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MATWebview : UIView
 @property (nonatomic, weak) id<MATWebviewDelegate> delegate;
+@property (nonatomic, assign) BOOL isVideoAd;
 - (void)loadUrl:(NSString*)url;
 - (void)dissMiss;
 - (void)playVideo;
+- (void)setVideoCacheFinish;
+- (void)setVideoCacheFailed;
 @end
 
 NS_ASSUME_NONNULL_END

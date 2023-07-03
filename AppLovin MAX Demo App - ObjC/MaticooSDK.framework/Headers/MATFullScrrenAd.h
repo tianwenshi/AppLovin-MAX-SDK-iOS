@@ -22,8 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableDictionary* baseDictionary;
 @property (nonatomic, strong) NSString* placementID;
 @property (nonatomic, assign) BOOL isLoading;
+@property (nonatomic, assign) BOOL isShowing;
 - (void)closeControlEvent;
 - (void)prepareCloseButton;
+- (void)addClostButtonControl;
+- (void)setButtonImage;
 - (void)presentModalView:(UIView*)view UIController:(UIViewController*) viewController;
 - (void)cacheMediaFiles:(NSArray*)mediaFiles resources:(NSArray*)resources;
 - (NSInteger)getAdType;

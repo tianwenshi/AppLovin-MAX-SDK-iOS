@@ -17,6 +17,9 @@
 #warning - Make sure to add your AppLovin SDK key in the Info.plist under the "AppLovinSdkKey" key
     
     // Initialize the AppLovin SDK
+    [ALPrivacySettings setDoNotSell:YES];
+    [ALPrivacySettings setHasUserConsent:NO];
+    [ALPrivacySettings setIsAgeRestrictedUser:YES];
     [ALSdk shared].mediationProvider = ALMediationProviderMAX;
     [[ALSdk shared] initializeSdkWithCompletionHandler:^(ALSdkConfiguration *configuration) {
         // AppLovin SDK is initialized, start loading ads now or later if ad gate is reached
