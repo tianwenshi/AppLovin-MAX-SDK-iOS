@@ -75,29 +75,20 @@
     BOOL hasUserConsent = ALPrivacySettings.hasUserConsent;
     BOOL hasUserConsentSet = ALPrivacySettings.isUserConsentSet;
     if (hasUserConsentSet){
-        if ( hasUserConsent )
-        {
-            [[MaticooAds shareSDK] setConsentStatus:hasUserConsent];
-        }
+        [[MaticooAds shareSDK] setConsentStatus:hasUserConsent];
     }
 
     BOOL isAgeRestrictedUser = ALPrivacySettings.isAgeRestrictedUser;
     BOOL isAgeRestrictedUserSet = ALPrivacySettings.isAgeRestrictedUserSet;
     if (isAgeRestrictedUserSet){
-        if ( isAgeRestrictedUser )
-        {
-            [[MaticooAds shareSDK] setIsAgeRestrictedUser:isAgeRestrictedUser];
-        }
+        [[MaticooAds shareSDK] setIsAgeRestrictedUser:isAgeRestrictedUser];
     }
 
     
     BOOL isDoNotSell = ALPrivacySettings.isDoNotSell;
     BOOL isDoNotSellSet = ALPrivacySettings.isDoNotSellSet;
     if (isDoNotSellSet){
-        if ( isDoNotSell )
-        {
-            [[MaticooAds shareSDK] setDoNotTrackStatus:isDoNotSell];
-        }
+        [[MaticooAds shareSDK] setDoNotTrackStatus:isDoNotSell];
     }
     
     // Override point for customization after application launch.
