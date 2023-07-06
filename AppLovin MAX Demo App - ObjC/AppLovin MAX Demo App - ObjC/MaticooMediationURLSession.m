@@ -95,10 +95,15 @@
             }
             else
             {
-                id responseObj;
+                id responseObj = nil;
                 responseObj=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves|NSJSONReadingAllowFragments error:&error1];
-                NSError *err = [NSError errorWithDomain:@"Maticoo SDK Error: " code:httpResponse.statusCode userInfo:[NSDictionary dictionaryWithObject:responseObj forKey:@"REASON"]];
-                complete(nil,err);
+                if (responseObj != nil){
+                    NSError *err = [NSError errorWithDomain:@"Maticoo SDK Error: " code:httpResponse.statusCode userInfo:[NSDictionary dictionaryWithObject:responseObj forKey:@"reason"]];
+                    complete(nil,err);
+                }else{
+                    NSError *err = [NSError errorWithDomain:@"Maticoo SDK Error: " code:httpResponse.statusCode userInfo:[NSDictionary dictionaryWithObject:@"unknow server error" forKey:@"reason"]];
+                    complete(nil,err);
+                }
             }
         }
     }];
