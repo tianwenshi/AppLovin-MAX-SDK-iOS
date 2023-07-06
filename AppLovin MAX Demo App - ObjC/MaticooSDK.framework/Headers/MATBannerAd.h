@@ -23,5 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)bannerAd:(MATBannerAd *)bannerAd didFailWithError:(NSError *)error;
 - (void)bannerAdDidImpression:(MATBannerAd*) bannerAd;
 - (void)bannerAdDidClick:(MATBannerAd*) bannerAd;
+- (void)bannerAdDismissed:(MATBannerAd*) bannerAd;
 @end
 NS_ASSUME_NONNULL_END

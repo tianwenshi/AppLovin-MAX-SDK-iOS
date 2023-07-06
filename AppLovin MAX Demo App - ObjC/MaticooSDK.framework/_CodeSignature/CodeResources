@@ -6,155 +6,330 @@
 	<dict>
 		<key>.DS_Store</key>
 		<data>
-		otCZF7iUbuFNrX0C+fx1wei5BhY=
+		YtZfUdBwEsvXlZczD00nLEg2760=
+		</data>
+		<key>Headers.meta</key>
+		<data>
+		270m3pPHSfEfi3Yi2ekAlp1/AuQ=
 		</data>
 		<key>Headers/MATAdModel.h</key>
 		<data>
 		/FYEY9cCqD0Q0/YVCHzNoyYtsgU=
 		</data>
+		<key>Headers/MATAdModel.h.meta</key>
+		<data>
+		sHu+VpydOWf/MqdUFR76WHnZsyw=
+		</data>
 		<key>Headers/MATBannerAd.h</key>
 		<data>
-		KDvinkpOVw21ex1ssyp46OIKVS0=
+		vXSzSid3hebm0/Ni5Q4yrAZWq14=
+		</data>
+		<key>Headers/MATBannerAd.h.meta</key>
+		<data>
+		e2aLjbUMBO3c0NAM63KypDtvghg=
 		</data>
 		<key>Headers/MATFullScrrenAd.h</key>
 		<data>
 		PhxDUFOTswxXj/vhfQK51dQfwo0=
 		</data>
+		<key>Headers/MATFullScrrenAd.h.meta</key>
+		<data>
+		9+IvzaddSbqaLqH9IPIlIc+Kd2I=
+		</data>
 		<key>Headers/MATInteractAd.h</key>
 		<data>
 		HrxiN/cYhCbWrSw7rkBF0x41jWU=
+		</data>
+		<key>Headers/MATInteractAd.h.meta</key>
+		<data>
+		Z0/kXCEuqGLHBlhUX080Td3iOhk=
 		</data>
 		<key>Headers/MATInterstitialAd.h</key>
 		<data>
 		B4iNsDzzysC+7Igm6nvUZkNCYFc=
 		</data>
+		<key>Headers/MATInterstitialAd.h.meta</key>
+		<data>
+		3MoewCfbmI4UT2xUpV1emnBfjtE=
+		</data>
 		<key>Headers/MATModalViewController.h</key>
 		<data>
 		116WJpjND5C+yxgEOLATlof9ysk=
+		</data>
+		<key>Headers/MATModalViewController.h.meta</key>
+		<data>
+		93bbdQY0jpWl7zlCCtMwSxp0JN8=
 		</data>
 		<key>Headers/MATNativeAd.h</key>
 		<data>
 		71EpWRb3UMPALBd3xhByV8ObilU=
 		</data>
+		<key>Headers/MATNativeAd.h.meta</key>
+		<data>
+		wA3W4j/NUMn3MnHU92YbOmEvFZ4=
+		</data>
 		<key>Headers/MATRewardedVideoAd.h</key>
 		<data>
 		aS1AIVmvwC/G3KIu5qI+Zv9cZuo=
+		</data>
+		<key>Headers/MATRewardedVideoAd.h.meta</key>
+		<data>
+		WnbJMj+hW20kzuBlV99DpiX3o10=
 		</data>
 		<key>Headers/MATSplashAd.h</key>
 		<data>
 		UUoDSaaE2nWGQSXrtljT2bQzIro=
 		</data>
+		<key>Headers/MATSplashAd.h.meta</key>
+		<data>
+		A/+FU9gZoxnkqB/PQRN7+t/XR2E=
+		</data>
 		<key>Headers/MATWebview.h</key>
 		<data>
 		lyKe6t5sxRhwjugORFdDjmxMWm8=
+		</data>
+		<key>Headers/MATWebview.h.meta</key>
+		<data>
+		MPAz25GPC1Ey63V1kMoQbaKlnbw=
 		</data>
 		<key>Headers/MaticooAds.h</key>
 		<data>
 		W1tltVCl2vaQsXj2cPCqhEhB64k=
 		</data>
+		<key>Headers/MaticooAds.h.meta</key>
+		<data>
+		WbX9eayidkeANtNV6iAKYpyeoDg=
+		</data>
 		<key>Headers/MaticooError.h</key>
 		<data>
 		FNUlBErl7PD5mpNjDOfAlSgh4bs=
+		</data>
+		<key>Headers/MaticooError.h.meta</key>
+		<data>
+		g0TSaWyhIuXM83bH7pa2i3fNOU4=
 		</data>
 		<key>Headers/MaticooSDK.h</key>
 		<data>
 		2RDIfzqNJibqLFI/VAHbYJzaOQY=
 		</data>
+		<key>Headers/MaticooSDK.h.meta</key>
+		<data>
+		24tiRD1OpkWsED4Xbyle+dHhE4c=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		fgA/HklYWm1Po50FFpxWlfu7e2E=
+		</data>
+		<key>Info.plist.meta</key>
+		<data>
+		U/9OdLU86utJtr3cRriCggMszEc=
+		</data>
+		<key>MaticooSDK.meta</key>
+		<data>
+		vvec0z54v/13136Zqg4wHj6zRx4=
+		</data>
+		<key>Modules.meta</key>
+		<data>
+		eyMAt8rZfrCMoGvARP5vpxmz/H8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		/oQv8KOY/91h2s9CpAzSM48QR+U=
 		</data>
+		<key>Modules/module.modulemap.meta</key>
+		<data>
+		3YdDxYfgz3F7PpFOLKDiaWNAsrk=
+		</data>
+		<key>PrivateHeaders.meta</key>
+		<data>
+		z05rNaLyuQdRhZImeJ8ybxzlG3A=
+		</data>
 		<key>PrivateHeaders/MATCustomButton.h</key>
 		<data>
 		hVAEWPc0ZFDRVWY/fLHr8yh63OA=
+		</data>
+		<key>PrivateHeaders/MATCustomButton.h.meta</key>
+		<data>
+		AntlWopOAou8A07MyCaxC/fdltM=
 		</data>
 		<key>PrivateHeaders/MATDevice.h</key>
 		<data>
 		6RtnLQZ7nUL3e1afax5x72BPe6A=
 		</data>
+		<key>PrivateHeaders/MATDevice.h.meta</key>
+		<data>
+		/5xk5DBr39f+NIQ7vcy5ERM6io4=
+		</data>
 		<key>PrivateHeaders/MATErrorHandler.h</key>
 		<data>
 		LmSs9gf7p7j6qhE2a3PrdQqqEUo=
+		</data>
+		<key>PrivateHeaders/MATErrorHandler.h.meta</key>
+		<data>
+		o9GDsxFBw/6t6wvVSYNmK68OAj8=
 		</data>
 		<key>PrivateHeaders/MATInteractEntranceView.h</key>
 		<data>
 		Lq7i093XtTJhDJO2ySee4+7gHag=
 		</data>
+		<key>PrivateHeaders/MATInteractEntranceView.h.meta</key>
+		<data>
+		BHuZygU4/sVFJRaVfqqcb1Cz6no=
+		</data>
 		<key>PrivateHeaders/MATJsonObject.h</key>
 		<data>
 		Myh1PPeJRkDOAKvLTK7Gg5+YfxQ=
+		</data>
+		<key>PrivateHeaders/MATJsonObject.h.meta</key>
+		<data>
+		7zXnA/EIIzgPPC41DN3upSNwfOA=
 		</data>
 		<key>PrivateHeaders/MATModel.h</key>
 		<data>
 		tzyRYEFIC6tmvjrUtXJ+z6hhcfs=
 		</data>
+		<key>PrivateHeaders/MATModel.h.meta</key>
+		<data>
+		TK35oiVl+BPvHippzgMMLCBWNlA=
+		</data>
 		<key>PrivateHeaders/MATModelProperties.h</key>
 		<data>
 		POx1cw4qVm73EA3X/ejp8v3MKEk=
+		</data>
+		<key>PrivateHeaders/MATModelProperties.h.meta</key>
+		<data>
+		li2c54mBe55RhVojGU6PWTyE/6Q=
 		</data>
 		<key>PrivateHeaders/MATModelProperty.h</key>
 		<data>
 		P+aKVsX+cnnm0IHAeq5rAEd6m7s=
 		</data>
+		<key>PrivateHeaders/MATModelProperty.h.meta</key>
+		<data>
+		kmsrDryXuakHXjVbN3p3YT6J8oM=
+		</data>
 		<key>PrivateHeaders/MATNetWorkManager.h</key>
 		<data>
 		nsYVmifzuMJQmfkzgwBaX7HdzKY=
+		</data>
+		<key>PrivateHeaders/MATNetWorkManager.h.meta</key>
+		<data>
+		aucgN42/ZEqrED4xnzrCWtlio8c=
 		</data>
 		<key>PrivateHeaders/MATPolicy.h</key>
 		<data>
 		wS4ibRpGQxdZxFTxEa9jK4FliI8=
 		</data>
+		<key>PrivateHeaders/MATPolicy.h.meta</key>
+		<data>
+		Ox+40NFaBefPWIXvEa6HWvl1ms0=
+		</data>
 		<key>PrivateHeaders/MATPropertyConst.h</key>
 		<data>
 		I4eUmh6AqZiUWEGaOzmC1xjpXFk=
+		</data>
+		<key>PrivateHeaders/MATPropertyConst.h.meta</key>
+		<data>
+		+CzRA6d9oMs+YjMroPCT42/5Ghk=
 		</data>
 		<key>PrivateHeaders/MATPropertyHandle.h</key>
 		<data>
 		KkbF3t7QTO90vJFAl8aA/YBI7xk=
 		</data>
+		<key>PrivateHeaders/MATPropertyHandle.h.meta</key>
+		<data>
+		OOkNmY52rYxMVSa16MI/GJDKy40=
+		</data>
 		<key>PrivateHeaders/MATPropertyType.h</key>
 		<data>
 		qgFb+AX7C5uBVBFiyw1Klm+dlJk=
+		</data>
+		<key>PrivateHeaders/MATPropertyType.h.meta</key>
+		<data>
+		mrXG+wZMPxlEobAus9HULJ7mXw4=
 		</data>
 		<key>PrivateHeaders/MATRequestParameters.h</key>
 		<data>
 		dhp+kkQ2aVJRA9jYRUTWfB7hkPc=
 		</data>
+		<key>PrivateHeaders/MATRequestParameters.h.meta</key>
+		<data>
+		i4QjSViFpIlynlffS1T1lR/Cfpk=
+		</data>
 		<key>PrivateHeaders/MATTools.h</key>
 		<data>
 		3MfV4Z3H232v/WdJtPw97/+jLu8=
+		</data>
+		<key>PrivateHeaders/MATTools.h.meta</key>
+		<data>
+		Tg4oVKSHminuCUgaYbVXyErzFzE=
 		</data>
 		<key>PrivateHeaders/MATTrackManager.h</key>
 		<data>
 		y2M8vCv40h33pqedQpFfndkhYws=
 		</data>
+		<key>PrivateHeaders/MATTrackManager.h.meta</key>
+		<data>
+		XP/tARmdiWXzQw0tyvHWQEsrG1c=
+		</data>
 		<key>PrivateHeaders/MATURLSessionNet.h</key>
 		<data>
 		VZsiO9ocGwfnV4Kz+KK53L8x1dI=
+		</data>
+		<key>PrivateHeaders/MATURLSessionNet.h.meta</key>
+		<data>
+		+/GwBymlmHyU6RljxwHhQ+qEhpw=
 		</data>
 		<key>PrivateHeaders/MATWeakScriptMessageDelegate.h</key>
 		<data>
 		TgEE/xt1tPm/3C0yrMkxwu0iQqc=
 		</data>
+		<key>PrivateHeaders/MATWeakScriptMessageDelegate.h.meta</key>
+		<data>
+		Ym1PueCONhFiGvYgAwetUm89nps=
+		</data>
 		<key>PrivateHeaders/MATWebviewBridge.h</key>
 		<data>
 		Bkn0TzpfJPvC8DzetK7KxLT9dL4=
+		</data>
+		<key>PrivateHeaders/MATWebviewBridge.h.meta</key>
+		<data>
+		nTJo8EzatU0cTGunYJGRoIV9/jc=
 		</data>
 		<key>PrivateHeaders/NSTimer+MATExtraMethod.h</key>
 		<data>
 		6PempFpsJs19n9hCCnFh5zF5Y3w=
 		</data>
+		<key>PrivateHeaders/NSTimer+MATExtraMethod.h.meta</key>
+		<data>
+		o1LBHITX87U34FVQecZyJ0X6TJo=
+		</data>
 		<key>PrivateHeaders/WKWebView+MATWebView.h</key>
 		<data>
 		TpbaC6aGQTL0RR8eheDMm+Gph3Q=
 		</data>
+		<key>PrivateHeaders/WKWebView+MATWebView.h.meta</key>
+		<data>
+		JV0D26NHxoKA0V7TVQIJ9vb6fwI=
+		</data>
+		<key>_CodeSignature.meta</key>
+		<data>
+		A2eH9uFKpNgALEM5VjZx/+/N0Kk=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			270m3pPHSfEfi3Yi2ekAlp1/AuQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			qWal7Hf7O5D8LP+2NBx8wC3RIZyFeQGchuHEoU1HhEM=
+			</data>
+		</dict>
 		<key>Headers/MATAdModel.h</key>
 		<dict>
 			<key>hash</key>
@@ -166,15 +341,37 @@
 			IEpH8BfTdXHBrlBwZ6/u//mybc202x09XRpT6NLwCAQ=
 			</data>
 		</dict>
+		<key>Headers/MATAdModel.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sHu+VpydOWf/MqdUFR76WHnZsyw=
+			</data>
+			<key>hash2</key>
+			<data>
+			I99Ovnr0WeeoSsy1xp+Uo6Ip4Z25voq+3ObaN08lE3k=
+			</data>
+		</dict>
 		<key>Headers/MATBannerAd.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KDvinkpOVw21ex1ssyp46OIKVS0=
+			vXSzSid3hebm0/Ni5Q4yrAZWq14=
 			</data>
 			<key>hash2</key>
 			<data>
-			abodtBWDqWHJiEi1fL0x9F+EedW8FszUCw0ta0hCJdI=
+			lNdpXQucwVLuPQp5Xh70PIzxXazu6JBKQoFunH80zHE=
+			</data>
+		</dict>
+		<key>Headers/MATBannerAd.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			e2aLjbUMBO3c0NAM63KypDtvghg=
+			</data>
+			<key>hash2</key>
+			<data>
+			tJUXqMQBTe2rhFzZwhq6PX0YosL/o/nl03M2lBsTS/Q=
 			</data>
 		</dict>
 		<key>Headers/MATFullScrrenAd.h</key>
@@ -188,6 +385,17 @@
 			/AQPgwOxpEbqXKY8sYjtHv81POf8jdfPnP/ilmoIUK8=
 			</data>
 		</dict>
+		<key>Headers/MATFullScrrenAd.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9+IvzaddSbqaLqH9IPIlIc+Kd2I=
+			</data>
+			<key>hash2</key>
+			<data>
+			waOP2WTuAijoHV5xQ5Xacrvwa9brGeD2UyEpMbnfgbw=
+			</data>
+		</dict>
 		<key>Headers/MATInteractAd.h</key>
 		<dict>
 			<key>hash</key>
@@ -197,6 +405,17 @@
 			<key>hash2</key>
 			<data>
 			WC2o0ZksuLbGdiR48vua5RjNe+QEh+3bu7m9osxaRHU=
+			</data>
+		</dict>
+		<key>Headers/MATInteractAd.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Z0/kXCEuqGLHBlhUX080Td3iOhk=
+			</data>
+			<key>hash2</key>
+			<data>
+			saGbCfwuMUP1WJvBLOL6M2c9wSpi8VdavK5px6tt8ps=
 			</data>
 		</dict>
 		<key>Headers/MATInterstitialAd.h</key>
@@ -210,6 +429,17 @@
 			bm1U+DBY9sI56QhBfTJARYFbS2ekoOBBjc5va3pddug=
 			</data>
 		</dict>
+		<key>Headers/MATInterstitialAd.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3MoewCfbmI4UT2xUpV1emnBfjtE=
+			</data>
+			<key>hash2</key>
+			<data>
+			1d2QHPMYsMeiTY1dWfbQqUhJVzkntAB7ERsp6KbEpog=
+			</data>
+		</dict>
 		<key>Headers/MATModalViewController.h</key>
 		<dict>
 			<key>hash</key>
@@ -219,6 +449,17 @@
 			<key>hash2</key>
 			<data>
 			jZ/rLBicQlffijSM+9B9fqp7AhmEiibRX1V50XihJhk=
+			</data>
+		</dict>
+		<key>Headers/MATModalViewController.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			93bbdQY0jpWl7zlCCtMwSxp0JN8=
+			</data>
+			<key>hash2</key>
+			<data>
+			q0gJKRTt3ypfhcObK0i2SU7wu+QsF7iL/I4f4bxVCe8=
 			</data>
 		</dict>
 		<key>Headers/MATNativeAd.h</key>
@@ -232,6 +473,17 @@
 			GKZLFxniYAki5jq7sYdFIY++pnAy2TIEHAnodM8LDy8=
 			</data>
 		</dict>
+		<key>Headers/MATNativeAd.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wA3W4j/NUMn3MnHU92YbOmEvFZ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			vbI5yK5xkb7r8MsIlIo62S3b64FPoJmlOjaCc5440iA=
+			</data>
+		</dict>
 		<key>Headers/MATRewardedVideoAd.h</key>
 		<dict>
 			<key>hash</key>
@@ -241,6 +493,17 @@
 			<key>hash2</key>
 			<data>
 			VRhoWawZn3Zh77604OG6bS9At+GV/noR5uXn8iuoJSo=
+			</data>
+		</dict>
+		<key>Headers/MATRewardedVideoAd.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WnbJMj+hW20kzuBlV99DpiX3o10=
+			</data>
+			<key>hash2</key>
+			<data>
+			MEenXaM4SNRKdL/xBMXh9XDP7iqk+hihuMhi2M702X8=
 			</data>
 		</dict>
 		<key>Headers/MATSplashAd.h</key>
@@ -254,6 +517,17 @@
 			Vv6hB7WpbNkDGTG1SDc3Xaf2GXBymj92zrVC7/BVTNE=
 			</data>
 		</dict>
+		<key>Headers/MATSplashAd.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			A/+FU9gZoxnkqB/PQRN7+t/XR2E=
+			</data>
+			<key>hash2</key>
+			<data>
+			cb8do7XVwunHiEywEnN+mgTOxiFn2ng5LdvYT0Z3Q68=
+			</data>
+		</dict>
 		<key>Headers/MATWebview.h</key>
 		<dict>
 			<key>hash</key>
@@ -263,6 +537,17 @@
 			<key>hash2</key>
 			<data>
 			RSeM2biI+WdAVtDVUuAxTCvJivT8sieHLSsKA8Al9gA=
+			</data>
+		</dict>
+		<key>Headers/MATWebview.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MPAz25GPC1Ey63V1kMoQbaKlnbw=
+			</data>
+			<key>hash2</key>
+			<data>
+			+qrMin+GrpWp6knymiDxtGXyhEQjE+liuVBQ7PlrkDw=
 			</data>
 		</dict>
 		<key>Headers/MaticooAds.h</key>
@@ -276,6 +561,17 @@
 			WLLdw2oINwS+7XxZoZDQx1cSFzi6ZpqQJsBuPAYRAm0=
 			</data>
 		</dict>
+		<key>Headers/MaticooAds.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WbX9eayidkeANtNV6iAKYpyeoDg=
+			</data>
+			<key>hash2</key>
+			<data>
+			C8q78tYmiCGOsNPHCGNMIO7r7Y6gFMMWinZ2cmT2dJo=
+			</data>
+		</dict>
 		<key>Headers/MaticooError.h</key>
 		<dict>
 			<key>hash</key>
@@ -285,6 +581,17 @@
 			<key>hash2</key>
 			<data>
 			H/Me3It5GtUasIAuHczohdRU2YYtZhAjXBb4ow39NpI=
+			</data>
+		</dict>
+		<key>Headers/MaticooError.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			g0TSaWyhIuXM83bH7pa2i3fNOU4=
+			</data>
+			<key>hash2</key>
+			<data>
+			xjkrCFkTaaTYPknj+axAFGf1AnnpQXS0fUAbjsVN4wA=
 			</data>
 		</dict>
 		<key>Headers/MaticooSDK.h</key>
@@ -298,6 +605,50 @@
 			wDR5ehxdNqcOsw5+/mflcqiMR3gES27J8/wCFPDfqp4=
 			</data>
 		</dict>
+		<key>Headers/MaticooSDK.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			24tiRD1OpkWsED4Xbyle+dHhE4c=
+			</data>
+			<key>hash2</key>
+			<data>
+			2aXX5E2//ufDT+KnGqCePlkKkT6E0H8fh+ZD83Swc5k=
+			</data>
+		</dict>
+		<key>Info.plist.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			U/9OdLU86utJtr3cRriCggMszEc=
+			</data>
+			<key>hash2</key>
+			<data>
+			c9cqdve6T5EeDEOQBGeJ1+itmDXor0A9UuiS2DH9pJc=
+			</data>
+		</dict>
+		<key>MaticooSDK.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vvec0z54v/13136Zqg4wHj6zRx4=
+			</data>
+			<key>hash2</key>
+			<data>
+			zBI4ZNLMswUkbSxr5ylbLFnwssLl1nmhbU914qo1cdM=
+			</data>
+		</dict>
+		<key>Modules.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eyMAt8rZfrCMoGvARP5vpxmz/H8=
+			</data>
+			<key>hash2</key>
+			<data>
+			3EZHfrAbuV7UoEih7RojtME43518it/phxnb4yhVVws=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
@@ -307,6 +658,28 @@
 			<key>hash2</key>
 			<data>
 			kiSttRpKwDvelhVZ8oGDB8yBZghmY+DIDwn+7Ijw4gk=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3YdDxYfgz3F7PpFOLKDiaWNAsrk=
+			</data>
+			<key>hash2</key>
+			<data>
+			E3BLpaRmuDni3a185iQSLLhE2IQJmjLY+hdODyuFRyE=
+			</data>
+		</dict>
+		<key>PrivateHeaders.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z05rNaLyuQdRhZImeJ8ybxzlG3A=
+			</data>
+			<key>hash2</key>
+			<data>
+			sbAskSzxH7tHskHkNyTZKCFkvS/rCOuVnrIEkGim9Ww=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATCustomButton.h</key>
@@ -320,6 +693,17 @@
 			HD9Z6wboK2IsD0XqHS7KYlxV9wEtdkHrR2KSwsoMwhQ=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATCustomButton.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AntlWopOAou8A07MyCaxC/fdltM=
+			</data>
+			<key>hash2</key>
+			<data>
+			25YhBn6XydqY1PbqH83efqYu0qiYNDwZ7zxpfXc6xEE=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MATDevice.h</key>
 		<dict>
 			<key>hash</key>
@@ -329,6 +713,17 @@
 			<key>hash2</key>
 			<data>
 			GvA4S+BKFtm6EGf+UylJJIXuXCHnBMFRmayK2l5uZQA=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MATDevice.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/5xk5DBr39f+NIQ7vcy5ERM6io4=
+			</data>
+			<key>hash2</key>
+			<data>
+			t9CP+lrO6yXthsMVBM5HhPflST1ErQzITUreGDHI5h4=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATErrorHandler.h</key>
@@ -342,6 +737,17 @@
 			CEwxU2OXCXExJlvDOmsoERvwYqLd9KUkB/333c0xXDk=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATErrorHandler.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			o9GDsxFBw/6t6wvVSYNmK68OAj8=
+			</data>
+			<key>hash2</key>
+			<data>
+			BpqbZInb7O5YNSSF3c7shzNuSc+p3uUgaMSblY8ZhBY=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MATInteractEntranceView.h</key>
 		<dict>
 			<key>hash</key>
@@ -351,6 +757,17 @@
 			<key>hash2</key>
 			<data>
 			DWschHTPlhnGDWrvzzB7DM8NU1QBsIQvynzjYcog5HA=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MATInteractEntranceView.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BHuZygU4/sVFJRaVfqqcb1Cz6no=
+			</data>
+			<key>hash2</key>
+			<data>
+			Cp41p5nhpEXMo6S7LeKr0XhaWTB4tyUo9rmgKkcz944=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATJsonObject.h</key>
@@ -364,6 +781,17 @@
 			0lY0Nc7IPGaNsWEydzgJufHF34gyjhRmPFzWZkfC3yM=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATJsonObject.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7zXnA/EIIzgPPC41DN3upSNwfOA=
+			</data>
+			<key>hash2</key>
+			<data>
+			N6wuoDKZcXXmNGfcWSOmTWrNv9QyNCdVmMEaq+yAvqo=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MATModel.h</key>
 		<dict>
 			<key>hash</key>
@@ -373,6 +801,17 @@
 			<key>hash2</key>
 			<data>
 			luGoX4wMxDxSMkiPsgoWkAu1I4bypkpCRc5tbxu4PSc=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MATModel.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TK35oiVl+BPvHippzgMMLCBWNlA=
+			</data>
+			<key>hash2</key>
+			<data>
+			kMV99ryfoY8RjxZ/n+tQKPDKCqF8LnKIvt/gBltpKlI=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATModelProperties.h</key>
@@ -386,6 +825,17 @@
 			QKRrK+rbNZ2+/t+V/mkost6IcwG9y+DsO7wLpFI9AW0=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATModelProperties.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			li2c54mBe55RhVojGU6PWTyE/6Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			Kt9GV3uljkf6Swo1D9Q9Bl6QAFL/9rDFCbLZrvhfIvE=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MATModelProperty.h</key>
 		<dict>
 			<key>hash</key>
@@ -395,6 +845,17 @@
 			<key>hash2</key>
 			<data>
 			/JStv+19kN/N29y9yGjVBSJ9ZYqpzJnJxhYyRvKDAdM=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MATModelProperty.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kmsrDryXuakHXjVbN3p3YT6J8oM=
+			</data>
+			<key>hash2</key>
+			<data>
+			pkjynRrtU7GyRJL6r+GihhZavTmTVdHHA3iw+pcFtt8=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATNetWorkManager.h</key>
@@ -408,6 +869,17 @@
 			9wz51P7ERlYyzbx1ihMtjnfG+fZpmPGBnVEDO+cuado=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATNetWorkManager.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aucgN42/ZEqrED4xnzrCWtlio8c=
+			</data>
+			<key>hash2</key>
+			<data>
+			xRCeP9yYFFGp90ZpwpAJDela9ZET5cRwKYEMluwRUqw=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MATPolicy.h</key>
 		<dict>
 			<key>hash</key>
@@ -417,6 +889,17 @@
 			<key>hash2</key>
 			<data>
 			6RviuVU6mHTtWIZ5zIsLXsMX09Cm2ZYXpai+eR9f90o=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MATPolicy.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ox+40NFaBefPWIXvEa6HWvl1ms0=
+			</data>
+			<key>hash2</key>
+			<data>
+			1DmYFZH4rlz0t0o2VslVuTuA+N7/kF79Au1YcGPYQNg=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATPropertyConst.h</key>
@@ -430,6 +913,17 @@
 			K8jw+KJRZfINofJBqvG704uNvhsdOkpD8AMvUVBs3to=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATPropertyConst.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+CzRA6d9oMs+YjMroPCT42/5Ghk=
+			</data>
+			<key>hash2</key>
+			<data>
+			Tjba90EiNFz1BvjKzC2VlW6HvxQX8U7uVm3tzjlOVQw=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MATPropertyHandle.h</key>
 		<dict>
 			<key>hash</key>
@@ -439,6 +933,17 @@
 			<key>hash2</key>
 			<data>
 			QiwI4eJyb+5iwlORd4GMGAF7Ge0kRc4GoR09d5gsSxE=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MATPropertyHandle.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OOkNmY52rYxMVSa16MI/GJDKy40=
+			</data>
+			<key>hash2</key>
+			<data>
+			AHKWQ+t/HZyRpRlAT0IWy3TWA5ce/fd8b8ASg/gzKC0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATPropertyType.h</key>
@@ -452,6 +957,17 @@
 			vXD4kA6/ZNyiG2eDLDCJ9FE4Mt0M3B0OQpiatVpToio=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATPropertyType.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mrXG+wZMPxlEobAus9HULJ7mXw4=
+			</data>
+			<key>hash2</key>
+			<data>
+			XGo/q4JTC1oxR936MweAT0yw8Yb5SKk1CG0BeIu40pE=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MATRequestParameters.h</key>
 		<dict>
 			<key>hash</key>
@@ -461,6 +977,17 @@
 			<key>hash2</key>
 			<data>
 			DfOKhhqH4lsVSDHBqsoren1qydUHWkItMn1eqGHhx5Q=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MATRequestParameters.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			i4QjSViFpIlynlffS1T1lR/Cfpk=
+			</data>
+			<key>hash2</key>
+			<data>
+			OqsNKgZrSLIzbthNqLdssy2ZouCpLx0AXcEs7k4drd0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATTools.h</key>
@@ -474,6 +1001,17 @@
 			dcCGy5a7EiWEcYHybH+lZAhik/ygYsvEr+xTfl71SQ8=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATTools.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Tg4oVKSHminuCUgaYbVXyErzFzE=
+			</data>
+			<key>hash2</key>
+			<data>
+			cFvWOPGpUMPgpDtJKNIXPCcQTUcvLj/BqHSN7lJMEWU=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MATTrackManager.h</key>
 		<dict>
 			<key>hash</key>
@@ -483,6 +1021,17 @@
 			<key>hash2</key>
 			<data>
 			pjd3mFcuo98WFKkX2vqTMiG3lsnmezIkXlg+FirOS3M=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MATTrackManager.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XP/tARmdiWXzQw0tyvHWQEsrG1c=
+			</data>
+			<key>hash2</key>
+			<data>
+			04RM52Tw5LlNNcINpB8AHtcWTYmeYz2KhGjGZZlDHIo=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATURLSessionNet.h</key>
@@ -496,6 +1045,17 @@
 			vWxZuI0geFr7t2gl8MRyolq0eWo7F6U6Y1C6NzHNpEA=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATURLSessionNet.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+/GwBymlmHyU6RljxwHhQ+qEhpw=
+			</data>
+			<key>hash2</key>
+			<data>
+			Bt9X8jMWaLA0foIHmqYqUqXjb/yF2QdmNooQDldPs4o=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MATWeakScriptMessageDelegate.h</key>
 		<dict>
 			<key>hash</key>
@@ -505,6 +1065,17 @@
 			<key>hash2</key>
 			<data>
 			R9VZtPNWcasQ7HcoQDAbINtQDD9Ai4hy6wDLcIqqS7Y=
+			</data>
+		</dict>
+		<key>PrivateHeaders/MATWeakScriptMessageDelegate.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ym1PueCONhFiGvYgAwetUm89nps=
+			</data>
+			<key>hash2</key>
+			<data>
+			zYS6AImzxB1hypuvD5ISBTA9LfV7mHBCAlx24y2TRiQ=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MATWebviewBridge.h</key>
@@ -518,6 +1089,17 @@
 			I+hu5RkHgX5EyT2a36y3qt6PhEEeB5uG0PurrEmETMg=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MATWebviewBridge.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nTJo8EzatU0cTGunYJGRoIV9/jc=
+			</data>
+			<key>hash2</key>
+			<data>
+			YXG3Ypb8K5xVSQcodMKewwClYC4Uxxp+PZrdNFL8BlU=
+			</data>
+		</dict>
 		<key>PrivateHeaders/NSTimer+MATExtraMethod.h</key>
 		<dict>
 			<key>hash</key>
@@ -529,6 +1111,17 @@
 			CBaZAANZ6o5o0NGPWyPyaWbo/oXBwxAOGgYa+Qgaiy4=
 			</data>
 		</dict>
+		<key>PrivateHeaders/NSTimer+MATExtraMethod.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			o1LBHITX87U34FVQecZyJ0X6TJo=
+			</data>
+			<key>hash2</key>
+			<data>
+			jje/7R6Q4mefiP7DhEKwY2IUfPolp/mRPGJM3Q/HNQ8=
+			</data>
+		</dict>
 		<key>PrivateHeaders/WKWebView+MATWebView.h</key>
 		<dict>
 			<key>hash</key>
@@ -538,6 +1131,28 @@
 			<key>hash2</key>
 			<data>
 			set4RPEv7wzq0Q1on03kbUcqPZYWMDAJeIuIg5BJlAI=
+			</data>
+		</dict>
+		<key>PrivateHeaders/WKWebView+MATWebView.h.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JV0D26NHxoKA0V7TVQIJ9vb6fwI=
+			</data>
+			<key>hash2</key>
+			<data>
+			dg+M5xJ7lSzitw+lF6+5nD3gUtw5Pc3+AnGGjqFl7kY=
+			</data>
+		</dict>
+		<key>_CodeSignature.meta</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			A2eH9uFKpNgALEM5VjZx/+/N0Kk=
+			</data>
+			<key>hash2</key>
+			<data>
+			j+4tmNaqxOk/ZUmqp7XNTPJzMQxZGQKq7iQHNAmCtPk=
 			</data>
 		</dict>
 	</dict>

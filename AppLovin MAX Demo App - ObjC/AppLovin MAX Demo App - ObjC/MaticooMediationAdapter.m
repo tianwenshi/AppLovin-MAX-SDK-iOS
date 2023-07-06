@@ -493,6 +493,11 @@
     [self.parentAdapter log: @"Banner shown: %@", bannerAd.placementID];
     [self.delegate didDisplayAdViewAd];
 }
+
+- (void)bannerAdDismissed:(MATBannerAd *)bannerAd{
+    [self.parentAdapter log: @"Banner dismiss: %@", bannerAd.placementID];
+    [self.delegate didHideAdViewAd];
+}
 @end
 
 @implementation ALMaticooMediationAdapterNativeAdViewAdDelegate
