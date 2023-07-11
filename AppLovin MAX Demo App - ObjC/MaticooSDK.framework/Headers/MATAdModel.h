@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSString *nurl;                    //WinNotice URL
 @property (nonatomic,strong) NSString *lurl;                    //LossNotice URL
 @property (nonatomic,strong) NSString *adurl;
+@property (nonatomic,strong) NSString *clkurl;
 @property (nonatomic,strong) NSString *adType;                  //"for interstitial Ad:interstitial-banner/interstitial-video"
 @property (nonatomic,assign) NSInteger expire;                  //Expire time, in minutes
 @property (nonatomic,strong) NSArray *mediaFiles;               //media file for reward ad

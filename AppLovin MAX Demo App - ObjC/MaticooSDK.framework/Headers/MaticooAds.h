@@ -31,6 +31,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(id)getPlacement:(NSString*) placementId;
 
 -(BOOL)isInitSuccess;
+
+-(id)getPlsInstance:(NSString*) placementId;
+
+-(void)addPlsInstance:(NSString*) placementId object:(NSObject*)obj;
 @end
 
 NS_ASSUME_NONNULL_END
