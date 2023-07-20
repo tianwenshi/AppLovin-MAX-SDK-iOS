@@ -59,7 +59,7 @@
     return [session POST:request completeHandler:^(id responseObj, NSError *error) {
         if (error)
         {
-            NSLog(error.description);
+            NSLog(@"%@", error.description);
             complete(responseObj,error);
         }
         else

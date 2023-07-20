@@ -74,11 +74,11 @@
     // Override point for customization after application launch.
     completionHandler(MAAdapterInitializationStatusDoesNotApply, nil);
     [[MaticooAds shareSDK] initSDK:appKey onSuccess:^() {
-        [MaticooMediationTrackManager trackMediationInitSuccess];
         completionHandler(MAAdapterInitializationStatusInitializedSuccess, nil);
+        [MaticooMediationTrackManager trackMediationInitSuccess];
     } onError:^(NSError* error) {
-        [MaticooMediationTrackManager trackMediationInitFailed:error];
         completionHandler(MAAdapterInitializationStatusInitializedFailure, error.description);
+        [MaticooMediationTrackManager trackMediationInitFailed:error];
     }];
 }
 
