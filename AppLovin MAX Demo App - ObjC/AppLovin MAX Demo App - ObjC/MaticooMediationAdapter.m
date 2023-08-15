@@ -73,6 +73,7 @@
     NSLog(@"Initializing Maticoo SDK with app key: %@...", appKey);
     // Override point for customization after application launch.
     completionHandler(MAAdapterInitializationStatusDoesNotApply, nil);
+    [[MaticooAds shareSDK] setMediationName:@"MAX"];
     [[MaticooAds shareSDK] initSDK:appKey onSuccess:^() {
         completionHandler(MAAdapterInitializationStatusInitializedSuccess, nil);
         [MaticooMediationTrackManager trackMediationInitSuccess];
