@@ -36,9 +36,9 @@
  @param complete 回调Block
  @return id
  */
-+ (id)POST:(NSString *)path parameters:(NSDictionary *)params postCiphertext:(BOOL)isCiphertext completeHandle:(void (^)(id responseObj, NSError* error))complete;
-
++ (id)POST:(NSString *)path completeHandle:(void (^)(id responseObj, NSError* error))complete;
 + (id)POST:(NSString *)path parameters:(NSDictionary *)params completeHandle:(void (^)(id responseObj, NSError* error))complete;
++ (id)POST:(NSString *)path parameters:(NSDictionary *)params giz:(BOOL)gzip completeHandle:(void (^)(id responseObj, NSError* error))complete;
 /**
  获取图片素材
 
@@ -46,12 +46,5 @@
  @param image Image
  */
 +(void)getImageFromURL:(NSString *)fileURL img:(void(^)(UIImage *ig))image;
-
-/**
- 获取当前设备的网络状态
- 
- @return 0 = 没有网络，3 = 移动网络， 5 = wifi网络
- */
-+ (int)getCurrentNetWorkState;
 
 @end

@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIViewController*)rootViewController:(UIViewController *)VC;
 + (BOOL)isDisplayedInScreenWith:(UIView *)flagView;
 + (NSString*)imageTypeForImageData:(NSData *)data;
++ (NSString *)getAPPIDFromLink:(NSString *)link;
++ (NSString*)timeNow;
 @end
 
 NS_ASSUME_NONNULL_END

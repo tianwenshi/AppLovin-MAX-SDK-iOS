@@ -11,18 +11,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MATRequestParameters : NSObject
 +(NSMutableDictionary *) buildBaseParameters;
++(NSMutableDictionary *) buildBIParameters;
++(NSMutableDictionary *) buildBiddingParameters;
 +(NSString *) buildLogUrl;
 +(NSString *) buildLogUrl:(NSString*) key;
 +(NSString *) buildInitUrl:(NSString*) key;
++(NSString *) buildPrivacyUrl:(NSString*) key;
 +(NSMutableDictionary *) buildBannerParameters:(NSMutableDictionary*) dict pid:(NSInteger)pid cwidth:(NSInteger)width cheight:(NSInteger)height;
-+(NSString *) buildBannerUrl;
-+(NSString *) buildFullScreenAdUrl:(BOOL) isVideo;
++(NSString *) buildRequestAdUrl;
 + (NSMutableDictionary *)buildNativeParameters:(NSMutableDictionary*)dic pid:(NSInteger)pid;
-+ (NSString *) buildNativeUrl;
 + (NSMutableDictionary *)buildInteractParameters:(NSMutableDictionary*)dic pid:(NSInteger)pid;
-+ (NSString *) buildInteractUrl;
 +(void) setAppkey:(NSString*)key;
 +(NSString*) getAppkey;
++(NSString *) buildBiddingUrl;
++(NSString *) buildBiddingAdUrl:(NSString*)requestId;
 @end
 
 NS_ASSUME_NONNULL_END

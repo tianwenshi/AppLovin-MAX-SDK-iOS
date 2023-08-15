@@ -1,5 +1,5 @@
 //
-//  NSTimer+ALSExtraMethod.h
+//  NSTimer+MATExtraMethod.h
 //  ApplinsSDK
 //
 //  Created by Mirinda on 2018/4/10.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSTimer (ALSADExtraMethod)
+@interface NSTimer (MATExtraMethod)
 /**
  创建NSTimer
  
@@ -16,17 +16,17 @@
  @param repeats 是否重复调用
  @param block  timer的回调
  */
-+ (NSTimer *)ALSScheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(void (^)(NSTimer *timer))block;
++ (NSTimer *)MATScheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(void (^)(NSTimer *timer))block;
 
 //暂停Timer
-- (void)ALSPauseTimer;
+- (void)MATPauseTimer;
 
 //重启Timer
-- (void)ALSResumeTimer;
+- (void)MATResumeTimer;
 
 //关闭Timer
-- (void)ALSStopTimer;
+- (void)MATStopTimer;
 
 //指定时间重启Timer
-- (void)ALSResumeTimerAfterTimeInterval:(NSTimeInterval)interval;
+- (void)MATResumeTimerAfterTimeInterval:(NSTimeInterval)interval;
 @end

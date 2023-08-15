@@ -9,10 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (ALSModelProperty)
+@interface NSObject (MATModelProperty)
 
 +(NSArray*)MATModelPropertys;
-+(BOOL)ALSIsClassFormFoundation:(Class)c;
++(BOOL)MATIsClassFormFoundation:(Class)c;
 
 @end
 

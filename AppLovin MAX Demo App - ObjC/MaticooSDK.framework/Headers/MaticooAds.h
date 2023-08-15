@@ -19,12 +19,30 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shareSDK;
 
 /**
- Get Applins AD Config in Appdelegate(didFinishLaunchingWithOptions:)
-
  @param appKey Appkey
  */
-- (void)initSDK:(NSString *)appKey onSuccess:(void(^)(void))success onError:(void(^)(NSError* error))errorcb;
 
+- (void)initSDK:(NSString *)appKey onSuccess:(void(^)(void))success onError:(void(^)(NSError* error))errorcb;
+/**
+ * If set to TRUE, the server will not display personalized ads based on the user's personal information.
+ * When receiving the user's request, and will not synchronize the user's information to other third-party partners.
+ * Default is FALSE.
+ * @param status 
+ */
+
+-(BOOL)getIsRestrictUser;
+
+-(void)setDoNotTrackStatus:(BOOL) status;
+
+-(BOOL)getDoNotTrackStatus;
+
+-(void)setConsentStatus:(BOOL) status;
+
+-(BOOL)getConsentStatus;
+
+-(void)setIsAgeRestrictedUser:(BOOL) status;
+
+-(BOOL)getIsAgeRestrictedUser;
 
 -(BOOL)verifyPlacementID:(NSString*)placementID;
 
@@ -35,6 +53,14 @@ NS_ASSUME_NONNULL_BEGIN
 -(id)getPlsInstance:(NSString*) placementId;
 
 -(void)addPlsInstance:(NSString*) placementId object:(NSObject*)obj;
+
+-(NSString*)getSDKVersion;
+
+-(NSString*)getBiddingToken:(NSString*) placementID timestamp:(NSInteger)timestamp;
+
+-(void)setMediationName:(NSString*)n;
+
+-(NSString*)getMediationName;
 @end
 
 NS_ASSUME_NONNULL_END

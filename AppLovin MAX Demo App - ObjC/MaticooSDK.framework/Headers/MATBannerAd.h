@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* placementID;
 - (MATBannerAd*)initWithPlacementID:(NSString*)placementID;
 - (void)loadAd;
+- (void)loadAd:(NSString*)biddingRequestId;
 @end
 
 @protocol MATBannerAdDelegate <NSObject>
@@ -23,5 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)bannerAd:(MATBannerAd *)bannerAd didFailWithError:(NSError *)error;
 - (void)bannerAdDidImpression:(MATBannerAd*) bannerAd;
 - (void)bannerAdDidClick:(MATBannerAd*) bannerAd;
+- (void)bannerAdDismissed:(MATBannerAd*) bannerAd;
 @end
 NS_ASSUME_NONNULL_END

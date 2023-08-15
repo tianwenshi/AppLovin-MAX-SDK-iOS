@@ -13,11 +13,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MATPolicy : NSObject
 
-+ (void)changeGDPRPrivacyPolicyState:(NSString *)gdprstate;
-+ (NSString *)GDPRPrivacyPolicyState;
-+ (void)setChildDescription:(NSString *)description; //设置儿童描述
-+ (NSString *)getChildDescription; //获取儿童描述
++ (instancetype)shareInstance;
 
+-(BOOL)getIsRestrictUser;
+
+-(void)setDoNotTrackStatus:(BOOL) status;
+
+-(BOOL)getDoNotTrackStatus;
+
+-(void)setIsAgeRestrictedUser:(BOOL) status;
+
+-(BOOL)getIsAgeRestrictedUser;
+
+-(void)setConsentStatus:(BOOL) status;
+
+-(BOOL)getConsentStatus;
 @end
 
 NS_ASSUME_NONNULL_END

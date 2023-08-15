@@ -19,17 +19,37 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isReady;
 @property (nonatomic, strong) MATWebview *__nullable matWebview;
 @property (nonatomic, assign) BOOL isVideo;
-@property (nonatomic, strong) NSMutableDictionary* baseDictionary;
+@property (atomic, strong) NSMutableDictionary* baseDictionary;
+@property (atomic, strong) NSMutableDictionary *biDictionary;
 @property (nonatomic, strong) NSString* placementID;
 @property (nonatomic, assign) BOOL isLoading;
 @property (nonatomic, assign) BOOL isShowing;
+@property (nonatomic, assign) BOOL alreadyImp;
+@property (nonatomic, assign) BOOL alreadyPlayVideo;
+@property (nonatomic, assign) BOOL alreadyCloseVisible;
+@property (nonatomic, strong) NSString *biddingRequestId;
+@property (nonatomic, assign) NSInteger adShow;
+@property (nonatomic, assign) NSInteger countDown;
+@property (nonatomic, assign) BOOL canSkip;
+
 - (void)closeControlEvent;
 - (void)prepareCloseButton;
-- (void)addClostButtonControl;
+- (void)addClostButtonControl:(NSInteger) top right:(NSInteger) right;
+- (void)removeCloseButton;
 - (void)setButtonImage;
 - (void)presentModalView:(UIView*)view UIController:(UIViewController*) viewController;
 - (void)cacheMediaFiles:(NSArray*)mediaFiles resources:(NSArray*)resources;
 - (NSInteger)getAdType;
+- (void)checkVideoPlay;
+- (void)webviewImp;
+- (void)webviewVideoImp;
+- (void)webviewLoadSuccess;
+- (void)webviewLoadFailed:(NSString*) msg;
+- (void)loadAd;
+- (void)pauseAd;
+- (void)resumeAd;
+- (void)dismissModalView:(MATWebview*)view animated:(BOOL)animated;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -18,15 +18,15 @@
 
 //Spalsh Skip Button
 + (instancetype _Nullable )initSkipButton;
-- (void)showSkipButtonFromTop:(NSInteger)top FromRight:(NSInteger)right skipTime:(NSInteger)skip superView:(UIView *_Nonnull)view buttonClicked:(void (^_Nonnull)(void))clicked;
+- (void)showSkipButtonFromTop:(NSInteger)top FromRight:(NSInteger)right skip:(BOOL)skip adShow:(NSInteger)showTime countDown:(NSInteger)count  superView:(UIView *_Nonnull)view buttonClicked:(void (^_Nonnull)(void))clicked;
 /**
  开始进度条动画
  
  @param duration 进度条时间
- @param block 以0.1s的粒度回调返回当前已经走过的时间
+ @param timeBlock 以0.1s的粒度回调返回当前已经走过的时间
  @param completion 是否结束 (YES,时间到自动结束； NO,stop方法触发结束)
  */
-- (void)progressStartWithDuration:(int)duration currentTime:(void (^_Nullable)(CGFloat time))timeBlock completion:(void (^ __nullable)(BOOL finished))completion;
+- (void)progressStartWithDuration:(NSInteger)duration currentTime:(void (^_Nullable)(CGFloat time))timeBlock completion:(void (^ __nullable)(BOOL finished))completion;
 
 //暂停绘制progress
 - (void)pause;

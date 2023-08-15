@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<MATSplashAdDelegate> delegate;
 - (MATSplashAd*)initWithPlacementID:(NSString*)placementID;
 - (void)loadAd;
+- (void)loadAd:(NSString*)biddingRequestId;
 - (void)showAdFromViewController:(UIViewController*) vc;
 - (void)showAdFromRootViewController;
 @end

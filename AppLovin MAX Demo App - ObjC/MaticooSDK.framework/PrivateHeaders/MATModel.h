@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSString *token;  //sdk bidding token prefix
 @property (nonatomic,assign) NSInteger d;      //"is debug mode 1:Yes,0:No"
 @property (nonatomic,strong) NSArray<MATPlacement*> *pls;
+@property (nonatomic,assign) NSInteger ntv_close_total;
+@property (nonatomic,assign) NSInteger ntv_close_failed;
 @end
 
 @interface MATPlacement : NSObject
@@ -41,6 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MATInterstitial : NSObject
 @property (nonatomic,assign)int64_t id;
 @property (nonatomic,assign)NSInteger type; //1-banner, 2- video, 0 - both
+@property (nonatomic,assign)NSInteger countdown;
 @end
 
 @interface MATRewardedVideo : NSObject
@@ -62,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MATSplash : NSObject
 @property (nonatomic,assign)int64_t id;
 @property (nonatomic,assign)NSInteger countdown;
-@property (nonatomic,assign)NSInteger skip;
+@property (nonatomic,assign)BOOL skip;
 @property (nonatomic,assign)NSInteger adshow;
 @end
 NS_ASSUME_NONNULL_END

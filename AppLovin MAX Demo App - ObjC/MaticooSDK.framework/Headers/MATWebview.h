@@ -20,19 +20,26 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)webviewAdRewareded;
 - (void)webviewCloseAd;
 - (void)webviewVideoMuted:(BOOL)isMuted;
+- (void)webviewCloseVisible;
+- (void)webviewInteract:(NSDictionary*)dict;
+- (void)webviewInteractClose;
 //native
 - (void)webviewClick;
 - (void)webviewImp;
+- (void)webviewPauseAd;
+- (void)webviewResumeAd;
 @end
 
 @interface MATWebview : UIView
 @property (nonatomic, weak) id<MATWebviewDelegate> delegate;
 @property (nonatomic, assign) BOOL isVideoAd;
+@property (nonatomic, strong) UIViewController *inVC;
 - (void)loadUrl:(NSString*)url;
 - (void)dissMiss;
 - (void)playVideo;
 - (void)setVideoCacheFinish;
 - (void)setVideoCacheFailed;
+- (void)evaluate:(NSString*)script;
 @end
 
 NS_ASSUME_NONNULL_END

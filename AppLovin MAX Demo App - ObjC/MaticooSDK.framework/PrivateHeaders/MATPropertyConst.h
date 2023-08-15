@@ -10,23 +10,23 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MATPropertyConst : NSObject
-extern NSString *const ALSPropertyTypeInt;
-extern NSString *const ALSPropertyTypeShort;
-extern NSString *const ALSPropertyTypeFloat;
-extern NSString *const ALSPropertyTypeDouble;
-extern NSString *const ALSPropertyTypeLong;
-extern NSString *const ALSPropertyTypeLongLong;
-extern NSString *const ALSPropertyTypeChar;
-extern NSString *const ALSPropertyTypeBOOL1;
-extern NSString *const ALSPropertyTypeBOOL2;
-extern NSString *const ALSPropertyTypePointer;
+extern NSString *const MATPropertyTypeInt;
+extern NSString *const MATPropertyTypeShort;
+extern NSString *const MATPropertyTypeFloat;
+extern NSString *const MATPropertyTypeDouble;
+extern NSString *const MATPropertyTypeLong;
+extern NSString *const MATPropertyTypeLongLong;
+extern NSString *const MATPropertyTypeChar;
+extern NSString *const MATPropertyTypeBOOL1;
+extern NSString *const MATPropertyTypeBOOL2;
+extern NSString *const MATPropertyTypePointer;
 
-extern NSString *const ALSPropertyTypeIvar;
-extern NSString *const ALSPropertyTypeMethod;
-extern NSString *const ALSPropertyTypeBlock;
-extern NSString *const ALSPropertyTypeClass;
-extern NSString *const ALSPropertyTypeSEL;
-extern NSString *const ALSPropertyTypeId;
+extern NSString *const MATPropertyTypeIvar;
+extern NSString *const MATPropertyTypeMethod;
+extern NSString *const MATPropertyTypeBlock;
+extern NSString *const MATPropertyTypeClass;
+extern NSString *const MATPropertyTypeSEL;
+extern NSString *const MATPropertyTypeId;
 @end
 
 NS_ASSUME_NONNULL_END

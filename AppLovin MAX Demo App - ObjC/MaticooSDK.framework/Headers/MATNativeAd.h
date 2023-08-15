@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger, AdElement) {
 @property (nonatomic, strong) NSString* _Nullable sponsored;
 @property (nonatomic, strong) NSString* _Nullable describe;
 @property (nonatomic, strong) NSString* _Nullable ctatext;
-@property (nonatomic, strong) NSString* _Nonnull  brandLogo;
+@property (nonatomic, strong) NSString* _Nullable  brandLogo; //图片的base64字符串
 @property (nonatomic, strong) MATWebview* _Nonnull mediaView;
 @end
 
@@ -54,6 +54,7 @@ typedef NS_ENUM(NSUInteger, AdElement) {
 
 - (instancetype)initWithPlacementID:(NSString *)placementID;
 - (void)loadAd;
+- (void)loadAd:(NSString*)biddingRequestId;
 - (void)nativeAdClosedReportWithReason:(NSString * _Nullable)reason; // for user Self-Rendering style ad
 //Personalized settings
 - (void)setAdTemplateStyle;

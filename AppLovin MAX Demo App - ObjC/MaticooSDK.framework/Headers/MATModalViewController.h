@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^vcWillLayout)(CGRect rt);
-typedef void (^VCDidAppear)();
+typedef void (^VCDidAppear)(void);
 @class MATModalViewController;
 
 @protocol MATModalViewControllerDelegate <NSObject>
@@ -20,7 +20,7 @@ typedef void (^VCDidAppear)();
 
 @interface MATModalViewController : UIViewController
 
-@property (nonatomic, assign) id<MATModalViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<MATModalViewControllerDelegate> delegate;
 @property (nonatomic, assign) BOOL allowRotation;
 @property (nonatomic, assign) BOOL isPresented;
 @property (nonatomic, copy) VCDidAppear vcDidAppearBolck;

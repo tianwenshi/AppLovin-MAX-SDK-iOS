@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSNumber*) getTimeZone;
 +(NSString*) getTimeZoneLocale;
 +(NSString*) getIDFA;
++(NSString*) getIDFV;
++(NSString*) getRandamID;
 +(NSNumber*) getDeviceType;
 +(NSString*) getLanguageCode;
 +(NSNumber*) isJailed;
@@ -28,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSNumber*) getScreenWidth;
 +(NSNumber*) getScreenHeight;
 +(NSNumber*) getConnectionType;
++(NSString*) getConnection;
 +(NSString*) getNetworkOperatorNameWithMCCMNC;
 +(NSNumber*) getFreeDiskSpace;
 +(NSNumber*) getBatteryLevel;

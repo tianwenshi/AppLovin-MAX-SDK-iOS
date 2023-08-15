@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MATErrorHandler : NSObject
-+ (NSError*)getErrorWithALSError:(MaticooError)MATError withAdType:(NSString*)adType additionalInfo:(NSString*)info andOfferId:(NSString*)offerid;
++ (NSError*)getErrorWithMATError:(MaticooError)MATError withAdType:(NSString*)adType additionalInfo:(NSString*)info andOfferId:(NSString*)offerid;
 @end
 
 NS_ASSUME_NONNULL_END
