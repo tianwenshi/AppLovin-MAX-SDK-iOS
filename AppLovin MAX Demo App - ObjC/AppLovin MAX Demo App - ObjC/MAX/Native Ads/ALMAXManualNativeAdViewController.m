@@ -27,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    NSString *textToCopy = [[UIDevice currentDevice].identifierForVendor UUIDString];
+    pasteboard.string = textToCopy;
     
     UINib *nativeAdViewNib = [UINib nibWithNibName: @"NativeManualAdView" bundle: NSBundle.mainBundle];
     self.nativeAdView = [nativeAdViewNib instantiateWithOwner: nil options: nil].firstObject;
