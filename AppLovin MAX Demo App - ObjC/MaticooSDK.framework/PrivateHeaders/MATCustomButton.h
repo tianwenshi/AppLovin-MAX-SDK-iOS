@@ -14,11 +14,11 @@
 @property (nonatomic, strong) UIColor * _Nullable progressColor;                //进度条颜色,默认黑色
 @property (nonatomic, assign) CGFloat progressWidth;                            //进度条宽度,默认2.0f
 @property (nonatomic, assign) BOOL removeProgressTrackAfterDraw;                //绘制完成后删除进度条轨道,默认不删除
-
+@property (nonatomic, assign) CGFloat p;
 
 //Spalsh Skip Button
 + (instancetype _Nullable )initSkipButton;
-- (void)showSkipButtonFromTop:(NSInteger)top FromRight:(NSInteger)right skip:(BOOL)skip adShow:(NSInteger)showTime countDown:(NSInteger)count  superView:(UIView *_Nonnull)view buttonClicked:(void (^_Nonnull)(void))clicked;
+- (void)showSkipButtonFromTop:(NSInteger)top FromRight:(NSInteger)right skip:(BOOL)skip adShow:(NSInteger)showTime countDown:(NSInteger)count  superView:(UIView *_Nonnull)view buttonClicked:(void (^_Nonnull)(BOOL))clicked;
 /**
  开始进度条动画
  

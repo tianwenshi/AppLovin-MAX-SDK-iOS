@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    self.nativeAdLoader = [[MANativeAdLoader alloc] initWithAdUnitIdentifier: @"f0649b17dc5d6a4e"];
+    self.nativeAdLoader = [[MANativeAdLoader alloc] initWithAdUnitIdentifier: @"93937b31a1065920"];
     self.nativeAdLoader.nativeAdDelegate = self;
     self.nativeAdLoader.revenueDelegate = self;
 }

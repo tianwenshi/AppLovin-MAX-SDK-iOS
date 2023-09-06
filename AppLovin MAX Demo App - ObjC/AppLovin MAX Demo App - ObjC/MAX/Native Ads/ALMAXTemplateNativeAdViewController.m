@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    self.nativeAdLoader = [[MANativeAdLoader alloc] initWithAdUnitIdentifier: @"f0649b17dc5d6a4e"];
+    self.nativeAdLoader = [[MANativeAdLoader alloc] initWithAdUnitIdentifier: @"eac965107ba5d5b4"];
     self.nativeAdLoader.nativeAdDelegate = self;
     self.nativeAdLoader.revenueDelegate = self;
 }

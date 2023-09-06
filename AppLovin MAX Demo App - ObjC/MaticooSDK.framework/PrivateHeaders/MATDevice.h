@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString*) getSystemBuild;
 +(NSString*) getBundleVersion;
 +(NSString*) getShortBundleVersion;
+//+(NSNumber*) getOrtScreenWidth;
+//+(NSNumber*) getOrtScreenHeight;
 +(NSNumber*) getScreenWidth;
 +(NSNumber*) getScreenHeight;
 +(NSNumber*) getConnectionType;

@@ -11,6 +11,7 @@
 #import "MATWebview.h"
 #import "MATAdModel.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MATFullScrrenAd : NSObject
@@ -31,9 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger adShow;
 @property (nonatomic, assign) NSInteger countDown;
 @property (nonatomic, assign) BOOL canSkip;
+@property (nonatomic, assign) BOOL isPreloading;
 
 - (void)closeControlEvent;
-- (void)prepareCloseButton;
+- (void)prepareCloseButton:(CGFloat)p;
 - (void)addClostButtonControl:(NSInteger) top right:(NSInteger) right;
 - (void)removeCloseButton;
 - (void)setButtonImage;
@@ -42,14 +44,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger)getAdType;
 - (void)checkVideoPlay;
 - (void)webviewImp;
+- (void)webviewClick;
 - (void)webviewVideoImp;
 - (void)webviewLoadSuccess;
 - (void)webviewLoadFailed:(NSString*) msg;
+- (void)webviewCloseVisible;
 - (void)loadAd;
 - (void)pauseAd;
 - (void)resumeAd;
 - (void)dismissModalView:(MATWebview*)view animated:(BOOL)animated;
-
+//- (void)webviewCacheSuccess;
 @end
 
 NS_ASSUME_NONNULL_END

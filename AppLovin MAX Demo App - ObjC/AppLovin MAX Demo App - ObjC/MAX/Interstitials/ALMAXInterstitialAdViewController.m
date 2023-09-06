@@ -23,8 +23,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: @"24b6de3721320530"];
+    CGFloat randomValue = (CGFloat)(arc4random_uniform(2)) / 2.0;
+    NSString *pid = @"c971d129eb5adfdc";
+    if (randomValue < 0.5)
+        pid = @"31952bc4acd4c5a3";
+
+    self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: pid];
     
     self.interstitialAd.delegate = self;
     self.interstitialAd.revenueDelegate = self;

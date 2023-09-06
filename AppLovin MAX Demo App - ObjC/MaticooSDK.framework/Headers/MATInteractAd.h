@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlacementID:(NSString *)placementID;
 - (void)loadAd;
+- (void)loadAd:(NSString*)biddingRequestId;
+- (void)loadAdOnController:(UIViewController *)VC;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol MATWebviewDelegate <NSObject>
 //js
+//- (void)webviewCacheSuccess;
 - (void)webviewLoadSuccess;
 - (void)webviewJsLoadSuccess;
 - (void)webviewLoadFailed:(NSString*)msg;
@@ -37,8 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadUrl:(NSString*)url;
 - (void)dissMiss;
 - (void)playVideo;
-- (void)setVideoCacheFinish;
-- (void)setVideoCacheFailed;
+//- (void)setVideoCacheFinish;
+//- (void)setVideoCacheFailed;
 - (void)evaluate:(NSString*)script;
 @end
 

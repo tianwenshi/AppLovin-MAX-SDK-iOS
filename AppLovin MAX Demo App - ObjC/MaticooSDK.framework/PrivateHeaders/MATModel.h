@@ -20,10 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSArray<MATPlacement*> *pls;
 @property (nonatomic,assign) NSInteger ntv_close_total;
 @property (nonatomic,assign) NSInteger ntv_close_failed;
+@property (nonatomic,assign) NSInteger ort;     //1:portait 2:landscape 3:adaptive
 @end
 
 @interface MATPlacement : NSObject
-@property (nonatomic,assign)int64_t id;      //Placement ID
+@property (nonatomic,assign)int64_t pid;      //Placement ID
 @property (nonatomic,strong)NSString* n;        //Placement Name
 @property (nonatomic,assign)NSInteger t;        //AdType 1banner 2interstital 3rewarded 4natvie 5interactive 6splash
 @property (nonatomic,strong)MATBanner* bn;
@@ -32,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)MATNativeVideo* ntv;
 @property (nonatomic,strong)MATInteractive* ia;
 @property (nonatomic,strong)MATSplash* spl;
+@property (nonatomic,assign)NSInteger preload;
 @end
 
 @interface MATBanner : NSObject

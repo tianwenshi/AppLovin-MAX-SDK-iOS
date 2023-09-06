@@ -865,7 +865,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ym.game.parkingking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunce.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -890,7 +890,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ym.game.parkingking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunce.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

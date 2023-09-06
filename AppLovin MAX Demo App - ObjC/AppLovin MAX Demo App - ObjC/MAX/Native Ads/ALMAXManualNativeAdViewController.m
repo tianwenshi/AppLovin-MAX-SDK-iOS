@@ -42,8 +42,11 @@
         builder.starRatingContentViewTag = 1008;
     }];
     [self.nativeAdView bindViewsWithAdViewBinder: binder];
-    
-    self.nativeAdLoader = [[MANativeAdLoader alloc] initWithAdUnitIdentifier: @"f0649b17dc5d6a4e"];
+    CGFloat randomValue = (CGFloat)(arc4random_uniform(2)) / 2.0;
+    NSString *pid = @"135da6bdc04e0669";
+    if (randomValue < 0.5)
+        pid = @"5451ed865b932d2d";
+    self.nativeAdLoader = [[MANativeAdLoader alloc] initWithAdUnitIdentifier: pid];
     self.nativeAdLoader.nativeAdDelegate = self;
     self.nativeAdLoader.revenueDelegate = self;
 }

@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*)imageTypeForImageData:(NSData *)data;
 + (NSString *)getAPPIDFromLink:(NSString *)link;
 + (NSString*)timeNow;
++ (CGFloat)distanceBetweenPoint:(CGPoint)point1 andPoint:(CGPoint)point2;
 @end
 
 NS_ASSUME_NONNULL_END

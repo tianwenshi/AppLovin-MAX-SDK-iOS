@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSArray *mediaFiles;               //media file for reward ad
 @property (nonatomic,strong) NSArray *resources;                //image/js file for reward ad
 @property (nonatomic,strong) NSString *adRequestId;
+@property (nonatomic,assign) CGFloat cat;
 @property (nonatomic,strong) MATNativeResponse *nativeResponse; //native ad respnose data
 @end
 
