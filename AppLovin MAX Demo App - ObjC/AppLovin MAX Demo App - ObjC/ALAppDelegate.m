@@ -15,7 +15,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 #warning - Make sure to add your AppLovin SDK key in the Info.plist under the "AppLovinSdkKey" key
-    
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    NSString *textToCopy = [[UIDevice currentDevice].identifierForVendor UUIDString];
+    pasteboard.string = textToCopy;
+    NSLog(@"%@", textToCopy);
     // Initialize the AppLovin SDK
     [ALSdk shared].mediationProvider = ALMediationProviderMAX;
     [[ALSdk shared] initializeSdkWithCompletionHandler:^(ALSdkConfiguration *configuration) {
