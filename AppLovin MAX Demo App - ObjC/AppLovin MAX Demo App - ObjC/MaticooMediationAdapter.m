@@ -130,6 +130,10 @@
 - (void)loadInterstitialAdForParameters:(id<MAAdapterResponseParameters>)parameters andNotify:(id<MAInterstitialAdapterDelegate>)delegate
 {
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
+    if (placementIdentifier == nil){
+        [delegate didFailToLoadInterstitialAdWithError:MAAdapterError.invalidConfiguration];
+        return;
+    }
     NSLog(@"Loading interstitial ad: %@...", placementIdentifier);
     [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:INTERSTITIAL isAutoRefresh:NO];
     
@@ -159,6 +163,10 @@
 - (void)loadRewardedAdForParameters:(id<MAAdapterResponseParameters>)parameters andNotify:(id<MARewardedAdapterDelegate>)delegate
 {
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
+    if (placementIdentifier == nil){
+        [delegate didFailToLoadRewardedAdWithError:MAAdapterError.invalidConfiguration];
+        return;
+    }
     [self log: @"Loading rewarded ad: %@...", placementIdentifier];
     [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:REWARDEDVIDEO isAutoRefresh:NO];
     
@@ -209,6 +217,10 @@
                         andNotify:(id<MAAdViewAdapterDelegate>)delegate
 {
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
+    if (placementIdentifier == nil){
+        [delegate didFailToLoadAdViewAdWithError:MAAdapterError.invalidConfiguration];
+        return;
+    }
     BOOL isNative = [parameters.customParameters al_boolForKey: @"is_native"];
     
     [self log: @"Loading%@%@ ad: %@...", isNative ? @" native " : @" ", adFormat.label, placementIdentifier];
@@ -241,6 +253,10 @@
     NSDictionary<NSString *, id> *serverParameters = parameters.serverParameters;
     BOOL isNativeBanner = [serverParameters al_boolForKey: @"is_native_banner"];
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
+    if (placementIdentifier == nil){
+        [delegate didFailToLoadNativeAdWithError:MAAdapterError.invalidConfiguration];
+        return;
+    }
     [self log: @"Loading native %@ad: %@...", isNativeBanner ? @"banner " : @"" , placementIdentifier];
     [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:NATIVE isAutoRefresh:NO];
     dispatchOnMainQueue(^{
