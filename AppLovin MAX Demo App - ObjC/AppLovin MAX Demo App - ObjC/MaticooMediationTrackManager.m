@@ -8,12 +8,7 @@
 #import "MaticooMediationTrackManager.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
-#import "MaticooMediationNetwork.h"
-
-#import "MaticooMediationTrackManager.h"
-#import <objc/runtime.h>
-#import <objc/message.h>
-#import "MaticooMediationNetwork.h"
+//#import "MaticooMediationNetwork.h"
 
 @implementation MaticooMediationTrackManager
 
@@ -89,4 +84,5 @@
         ((void (*)(Class, SEL, NSString*, NSInteger))objc_msgSend)(matTrackManagerClass, selector, pid, adtype);
     }
 }
+
 @end
