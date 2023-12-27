@@ -8,7 +8,12 @@
 
 #import "MaticooMediationAdapter.h"
 #import "MaticooMediationTrackManager.h"
-#define ADAPTER_VERSION @"1.1.0"
+#define ADAPTER_VERSION @"1.1.1"
+
+
+
+#define MAT_NSSTRING_NOT_NULL(str)\
+([(str) isKindOfClass:[NSString class]] && ![(str) isEqualToString:@""])
 
 @interface ALMaticooMediationAdapterInterstitialAdDelegate : NSObject <MATInterstitialAdDelegate>
 @property (nonatomic,   weak) MaticooMediationAdapter *parentAdapter;
@@ -130,6 +135,14 @@
 - (void)loadInterstitialAdForParameters:(id<MAAdapterResponseParameters>)parameters andNotify:(id<MAInterstitialAdapterDelegate>)delegate
 {
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
+    if(!MAT_NSSTRING_NOT_NULL(placementIdentifier)) {
+        NSError *error = [[NSError alloc]initWithDomain:@"The placementIdentifier of the interstitial ad is empty." code:106 userInfo:nil];
+        [MaticooMediationTrackManager trackMediationAdRequestFailed:placementIdentifier adType:INTERSTITIAL msg:error.description];
+        MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
+        [delegate didFailToLoadInterstitialAdWithError: adapterError];
+        return;
+    }
+    
     NSLog(@"Loading interstitial ad: %@...", placementIdentifier);
     [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:INTERSTITIAL isAutoRefresh:NO];
     
@@ -159,6 +172,13 @@
 - (void)loadRewardedAdForParameters:(id<MAAdapterResponseParameters>)parameters andNotify:(id<MARewardedAdapterDelegate>)delegate
 {
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
+    if(!MAT_NSSTRING_NOT_NULL(placementIdentifier)) {
+        NSError *error = [[NSError alloc]initWithDomain:@"The placementIdentifier of the RewardedVideo ad is empty." code:106 userInfo:nil];
+        [MaticooMediationTrackManager trackMediationAdRequestFailed:placementIdentifier adType:REWARDEDVIDEO msg:error.description];
+        MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
+        [delegate didFailToLoadRewardedAdWithError: adapterError];
+        return;
+    }
     [self log: @"Loading rewarded ad: %@...", placementIdentifier];
     [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:REWARDEDVIDEO isAutoRefresh:NO];
     
@@ -208,8 +228,25 @@
                          adFormat:(MAAdFormat *)adFormat
                         andNotify:(id<MAAdViewAdapterDelegate>)delegate
 {
-    NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
     BOOL isNative = [parameters.customParameters al_boolForKey: @"is_native"];
+    NSString *domain = nil;
+    NSInteger adType = 0;
+    if(isNative){
+        domain = @"The placementIdentifier of the native ad is empty.";
+        adType = NATIVE;
+    }else {
+        domain = @"The placementIdentifier of the banner ad is empty.";
+        adType = BANNER;
+    }
+    
+    NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
+    if(!MAT_NSSTRING_NOT_NULL(placementIdentifier)) {
+        NSError *error = [[NSError alloc]initWithDomain:domain code:106 userInfo:nil];
+        [MaticooMediationTrackManager trackMediationAdRequestFailed:placementIdentifier adType:adType msg:error.description];
+        MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
+        [delegate didFailToLoadAdViewAdWithError: adapterError];
+        return;
+    }
     
     [self log: @"Loading%@%@ ad: %@...", isNative ? @" native " : @" ", adFormat.label, placementIdentifier];
     
@@ -241,6 +278,13 @@
     NSDictionary<NSString *, id> *serverParameters = parameters.serverParameters;
     BOOL isNativeBanner = [serverParameters al_boolForKey: @"is_native_banner"];
     NSString *placementIdentifier = parameters.thirdPartyAdPlacementIdentifier;
+    if(!MAT_NSSTRING_NOT_NULL(placementIdentifier)) {
+        NSError *error = [[NSError alloc]initWithDomain:@"The placementIdentifier of the native ad is empty." code:106 userInfo:nil];
+        [MaticooMediationTrackManager trackMediationAdRequestFailed:placementIdentifier adType:NATIVE msg:error.description];
+        MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
+        [delegate didFailToLoadNativeAdWithError: adapterError];
+        return;
+    }
     [self log: @"Loading native %@ad: %@...", isNativeBanner ? @"banner " : @"" , placementIdentifier];
     [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:NATIVE isAutoRefresh:NO];
     dispatchOnMainQueue(^{
@@ -510,7 +554,8 @@
 - (void)nativeAdFailed:(nonnull MATNativeAd *)nativeAd withError:(nonnull NSError *)error {
     [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeAd.placementID adType:NATIVE msg:@""];
     [self.parentAdapter log: @"Native (%@) failed to load with error: %@", nativeAd.placementID, error];
-    [self.delegate didFailToLoadAdViewAdWithError: error];
+    MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
+    [self.delegate didFailToLoadAdViewAdWithError: adapterError];
 }
 
 - (void)nativeAdLoadSuccess:(nonnull MATNativeAd *)nativeAd {
