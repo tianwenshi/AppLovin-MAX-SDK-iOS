@@ -8,7 +8,7 @@
 
 #import "MaticooMediationAdapter.h"
 #import "MaticooMediationTrackManager.h"
-#define ADAPTER_VERSION @"1.1.1"
+#define ADAPTER_VERSION @"1.1.3"
 
 
 
@@ -442,12 +442,10 @@
 
 - (void)rewardedVideoAdStarted:(MATRewardedVideoAd *)rewardedVideoAd{
     [self.parentAdapter log: @"Rewarded video started: %@", rewardedVideoAd.placementID];
-    [self.delegate didStartRewardedAdVideo];
 }
 
 - (void)rewardedVideoAdCompleted:(MATRewardedVideoAd *)rewardedVideoAd{
     [self.parentAdapter log: @"Rewarded video completed: %@", rewardedVideoAd.placementID];
-    [self.delegate didCompleteRewardedAdVideo];
 }
 
 - (void)rewardedVideoAdWillLogImpression:(MATRewardedVideoAd *)rewardedVideoAd{
@@ -516,6 +514,15 @@
     [MaticooMediationTrackManager trackMediationAdImp:bannerAd.placementID adType:BANNER];
     [self.parentAdapter log: @"Banner shown: %@", bannerAd.placementID];
     [self.delegate didDisplayAdViewAd];
+}
+
+- (void)bannerAd:(MATBannerAd *)bannerAd showFailWithError:(NSError *)error{
+    [MaticooMediationTrackManager trackMediationAdImpFailed:bannerAd.placementID adType:BANNER msg:error.description];
+    MAAdapterError *adapterError = [MaticooMediationAdapter toMaxError: error];
+    [self.parentAdapter log: @"Banner show failed: %@ and error:%@", bannerAd.placementID, error.description];
+    if ([self.delegate respondsToSelector:@selector(didFailToDisplayAdViewAdWithError:)]) {
+        [self.delegate didFailToDisplayAdViewAdWithError:adapterError];
+    }
 }
 @end
 
