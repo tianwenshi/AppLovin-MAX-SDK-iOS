@@ -8,6 +8,7 @@
 
 #import "ALMAXAdPlacerTableViewController.h"
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "MaticooTest.h"
 
 @interface ALMAXAdPlacerTableViewController()<MAAdPlacerDelegate>
 

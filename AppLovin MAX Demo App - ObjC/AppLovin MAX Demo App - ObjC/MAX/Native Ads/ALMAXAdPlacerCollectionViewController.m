@@ -9,6 +9,7 @@
 #import "ALMAXAdPlacerCollectionViewController.h"
 #import "ALTextCollectionViewCell.h"
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "MaticooTest.h"
 
 @interface ALMAXAdPlacerCollectionViewController()<MAAdPlacerDelegate>
 

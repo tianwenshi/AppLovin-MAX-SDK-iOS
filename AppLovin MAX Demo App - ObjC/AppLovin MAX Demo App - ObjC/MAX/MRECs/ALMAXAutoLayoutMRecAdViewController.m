@@ -9,6 +9,7 @@
 #import "ALMAXAutoLayoutMRecAdViewController.h"
 #import <Adjust/Adjust.h>
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "MaticooTest.h"
 
 @interface ALMAXAutoLayoutMRecAdViewController()<MAAdViewAdDelegate, MAAdRevenueDelegate>
 @property (nonatomic, strong) MAAdView *adView;
@@ -26,6 +27,9 @@
     
     self.adView.delegate = self;
     self.adView.revenueDelegate = self;
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [self.adView setLocalExtraParameterForKey:MAT_EXTRA_GPID value:MAT_EXTRA_GPID_VALUE];
+    }
     
     self.adView.translatesAutoresizingMaskIntoConstraints = NO;
 

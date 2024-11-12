@@ -9,6 +9,7 @@
 #import "ALMAXAutoLayoutBannerAdViewController.h"
 #import <Adjust/Adjust.h>
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "MaticooTest.h"
 
 @interface ALMAXAutoLayoutBannerAdViewController()<MAAdViewAdDelegate, MAAdRevenueDelegate>
 @property (nonatomic, strong) MAAdView *adView;
@@ -23,6 +24,9 @@
     [super viewDidLoad];
     
     self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: @"5653ae8b066d461b"];
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [self.adView setLocalExtraParameterForKey:MAT_EXTRA_GPID value:MAT_EXTRA_GPID_VALUE];
+    }
     
     self.adView.delegate = self;
     self.adView.revenueDelegate = self;

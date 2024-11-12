@@ -148,6 +148,9 @@
     
     self.interstitial = [[MATInterstitialAd alloc] initWithPlacementID:placementIdentifier];
     self.interstitialAdapterDelegate = [[ALMaticooMediationAdapterInterstitialAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
+    if(parameters.localExtraParameters){
+        self.interstitial.localExtra = parameters.localExtraParameters;
+    }
     self.interstitial.delegate = self.interstitialAdapterDelegate;
     [self.interstitial loadAd];    
 }
@@ -193,6 +196,9 @@
     }
     else
     {
+        if(parameters.localExtraParameters){
+            self.rewardedVideoAd.localExtra = parameters.localExtraParameters;
+        }
         [self log: @"Loading bidding rewarded ad..."];
         [self.rewardedVideoAd loadAd];
     }
@@ -257,6 +263,9 @@
         self.nativeAdViewAdAdapterDelegate = [[ALMaticooMediationAdapterNativeAdViewAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
         self.nativeAd.delegate = self.nativeAdViewAdAdapterDelegate;
         [self log: @"Loading bidding native %@ ad...", adFormat.label];
+        if(parameters.localExtraParameters){
+            self.nativeAd.localExtra = parameters.localExtraParameters;
+        }
         [self.nativeAd loadAd];
     }
     else
@@ -267,6 +276,9 @@
         self.bannerAdView.frame = CGRectMake(0, 0, adSize.width, adSize.height);
         self.adViewAdapterDelegate = [[ALMaticooMediationAdapterAdViewDelegate alloc] initWithParentAdapter: self andNotify: delegate];
         self.bannerAdView.delegate = self.adViewAdapterDelegate;
+        if(parameters.localExtraParameters){
+            self.bannerAdView.localExtra = parameters.localExtraParameters;
+        }
         [self.bannerAdView loadAd];
     }
 }
@@ -291,6 +303,10 @@
         self.nativeAd = [[MATNativeAd alloc] initWithPlacementID: placementIdentifier];
         self.nativeAdAdapterDelegate = [[ALMaticooMediationAdapterNativeAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
         self.nativeAd.delegate = self.nativeAdAdapterDelegate;
+        
+        if(parameters.localExtraParameters){
+            self.nativeAd.localExtra = parameters.localExtraParameters;
+        }
         [self.nativeAd loadAd];
     });
 }

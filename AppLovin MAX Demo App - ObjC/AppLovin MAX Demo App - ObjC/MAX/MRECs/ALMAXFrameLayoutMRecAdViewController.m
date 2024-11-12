@@ -9,6 +9,7 @@
 #import "ALMAXFrameLayoutMRecAdViewController.h"
 #import <Adjust/Adjust.h>
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "MaticooTest.h"
 
 @interface ALMAXFrameLayoutMRecAdViewController()<MAAdViewAdDelegate, MAAdRevenueDelegate>
 @property (nonatomic, strong) MAAdView *adView;
@@ -23,6 +24,10 @@
     [super viewDidLoad];
     
     self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: @"58e408bf2942240b" adFormat: MAAdFormat.mrec];
+    
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [self.adView setLocalExtraParameterForKey:MAT_EXTRA_GPID value:MAT_EXTRA_GPID_VALUE];
+    }
     
     self.adView.delegate = self;
     self.adView.revenueDelegate = self;

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,6 @@
 		1D992FE8231FA1C500C472F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D992FE7231FA1C500C472F8 /* Assets.xcassets */; };
 		1D992FEB231FA1C500C472F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D992FE9231FA1C500C472F8 /* LaunchScreen.storyboard */; };
 		28BC14812A15CD450068174B /* MaticooMediationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC14802A15CD450068174B /* MaticooMediationAdapter.m */; };
-		28BE668A2A36EF8E0063038B /* MaticooMediationNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */; };
-		28BE668D2A36F0140063038B /* MaticooMediationURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE668C2A36F0140063038B /* MaticooMediationURLSession.m */; };
 		28BE66902A36FAD60063038B /* MaticooMediationTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE668F2A36FAD60063038B /* MaticooMediationTrackManager.m */; };
 		28BE66922A39D2DF0063038B /* MaticooSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BE66912A39D2DF0063038B /* MaticooSDK.framework */; };
 		3517A8CF27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517A8CE27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m */; };
@@ -79,10 +77,6 @@
 		1D992FED231FA1C500C472F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28BC147F2A15CD450068174B /* MaticooMediationAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooMediationAdapter.h; sourceTree = "<group>"; };
 		28BC14802A15CD450068174B /* MaticooMediationAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationAdapter.m; sourceTree = "<group>"; };
-		28BE66882A36EF8E0063038B /* MaticooMediationNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationNetwork.h; sourceTree = "<group>"; };
-		28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationNetwork.m; sourceTree = "<group>"; };
-		28BE668B2A36F0140063038B /* MaticooMediationURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationURLSession.h; sourceTree = "<group>"; };
-		28BE668C2A36F0140063038B /* MaticooMediationURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationURLSession.m; sourceTree = "<group>"; };
 		28BE668E2A36FAD60063038B /* MaticooMediationTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationTrackManager.h; sourceTree = "<group>"; };
 		28BE668F2A36FAD60063038B /* MaticooMediationTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationTrackManager.m; sourceTree = "<group>"; };
 		28BE66912A39D2DF0063038B /* MaticooSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaticooSDK.framework; sourceTree = "<group>"; };
@@ -119,6 +113,7 @@
 		77B6F435279B51AB0063F81D /* ALMAXManualNativeAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMAXManualNativeAdViewController.h; sourceTree = "<group>"; };
 		77B6F436279B51AB0063F81D /* ALMAXTemplateNativeAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMAXTemplateNativeAdViewController.m; sourceTree = "<group>"; };
 		8B44FAD7FD9A7F46FD47BFD5 /* Pods_AppLovin_MAX_Demo_App___ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_AppLovin_MAX_Demo_App___ObjC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F57F2322CDC9787000AFDC9 /* MaticooTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooTest.h; sourceTree = "<group>"; };
 		947968BDEB66F929BB7F3151 /* Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC.debug.xcconfig"; path = "Target Support Files/Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC/Pods-Non-Mediated Projects-AppLovin MAX Demo App - ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		C0DE8BB1234E8A86004B0CFC /* ALBaseAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALBaseAdViewController.h; sourceTree = "<group>"; };
 		C0DE8BB2234E8A86004B0CFC /* ALBaseAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALBaseAdViewController.m; sourceTree = "<group>"; };
@@ -252,12 +247,9 @@
 				1D993015231FA39000C472F8 /* Supporting Files */,
 				28BC147F2A15CD450068174B /* MaticooMediationAdapter.h */,
 				28BC14802A15CD450068174B /* MaticooMediationAdapter.m */,
-				28BE66882A36EF8E0063038B /* MaticooMediationNetwork.h */,
-				28BE66892A36EF8E0063038B /* MaticooMediationNetwork.m */,
-				28BE668B2A36F0140063038B /* MaticooMediationURLSession.h */,
-				28BE668C2A36F0140063038B /* MaticooMediationURLSession.m */,
 				28BE668E2A36FAD60063038B /* MaticooMediationTrackManager.h */,
 				28BE668F2A36FAD60063038B /* MaticooMediationTrackManager.m */,
+				8F57F2322CDC9787000AFDC9 /* MaticooTest.h */,
 			);
 			path = "AppLovin MAX Demo App - ObjC";
 			sourceTree = "<group>";
@@ -676,10 +668,8 @@
 				37C7E1F523297423002165B5 /* main.m in Sources */,
 				E56785EE23F3557B00ACA6C1 /* ALDemoBannerZoneViewController.m in Sources */,
 				E56785E823F3555A00ACA6C1 /* ALDemoProgrammaticBannerViewController.m in Sources */,
-				28BE668A2A36EF8E0063038B /* MaticooMediationNetwork.m in Sources */,
 				E567854623F22E1300ACA6C1 /* ALDemoRewardedVideosZoneViewController.m in Sources */,
 				3517A8CF27F76F860074CCDE /* ALMAXAdPlacerCollectionViewController.m in Sources */,
-				28BE668D2A36F0140063038B /* MaticooMediationURLSession.m in Sources */,
 				62CD0EE8286E1C7400BD03CE /* ALMAXMRecTableViewCell.m in Sources */,
 				37B6CEDB246E05D00068A6A4 /* ALMAXInterfaceBuilderMRecAdViewController.m in Sources */,
 				35C0C88027F786A50030B2F8 /* ALTextCollectionViewCell.m in Sources */,

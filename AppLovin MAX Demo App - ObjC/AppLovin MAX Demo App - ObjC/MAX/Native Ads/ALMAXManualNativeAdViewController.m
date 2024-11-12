@@ -9,6 +9,7 @@
 #import "ALMAXManualNativeAdViewController.h"
 #import <Adjust/Adjust.h>
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "MaticooTest.h"
 
 @interface ALMAXManualNativeAdViewController()<MANativeAdDelegate, MAAdRevenueDelegate>
 
@@ -50,6 +51,10 @@
     if (randomValue < 0.5)
         pid = @"5451ed865b932d2d";
     self.nativeAdLoader = [[MANativeAdLoader alloc] initWithAdUnitIdentifier: pid];
+    
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [self.nativeAdLoader setLocalExtraParameterForKey:MAT_EXTRA_GPID value:MAT_EXTRA_GPID_VALUE];
+    }
     self.nativeAdLoader.nativeAdDelegate = self;
     self.nativeAdLoader.revenueDelegate = self;
 }

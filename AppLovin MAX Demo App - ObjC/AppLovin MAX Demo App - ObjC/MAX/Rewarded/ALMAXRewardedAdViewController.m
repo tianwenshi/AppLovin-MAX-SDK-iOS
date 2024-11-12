@@ -9,6 +9,7 @@
 #import "ALMAXRewardedAdViewController.h"
 #import <Adjust/Adjust.h>
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "MaticooTest.h"
 
 @interface ALMAXRewardedAdViewController()<MARewardedAdDelegate, MAAdRevenueDelegate>
 @property (nonatomic, strong) MARewardedAd *rewardedAd;
@@ -24,6 +25,10 @@
     [super viewDidLoad];
     
     self.rewardedAd = [MARewardedAd sharedWithAdUnitIdentifier: @"778e32963a98a072"];
+    
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [self.rewardedAd setLocalExtraParameterForKey:MAT_EXTRA_GPID value:MAT_EXTRA_GPID_VALUE];
+    }
     
     self.rewardedAd.delegate = self;
     self.rewardedAd.revenueDelegate = self;

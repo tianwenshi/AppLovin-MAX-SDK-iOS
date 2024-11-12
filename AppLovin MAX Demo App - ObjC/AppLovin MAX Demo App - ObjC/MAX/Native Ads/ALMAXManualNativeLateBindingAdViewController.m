@@ -9,6 +9,7 @@
 #import "ALMAXManualNativeLateBindingAdViewController.h"
 #import <Adjust/Adjust.h>
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "MaticooTest.h"
 
 @interface ALMAXManualNativeLateBindingAdViewController()<MANativeAdDelegate, MAAdRevenueDelegate>
 
@@ -30,6 +31,9 @@
     [super viewDidLoad];
     
     self.nativeAdLoader = [[MANativeAdLoader alloc] initWithAdUnitIdentifier: @"93937b31a1065920"];
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [self.nativeAdLoader setLocalExtraParameterForKey:MAT_EXTRA_GPID value:MAT_EXTRA_GPID_VALUE];
+    }
     self.nativeAdLoader.nativeAdDelegate = self;
     self.nativeAdLoader.revenueDelegate = self;
 }

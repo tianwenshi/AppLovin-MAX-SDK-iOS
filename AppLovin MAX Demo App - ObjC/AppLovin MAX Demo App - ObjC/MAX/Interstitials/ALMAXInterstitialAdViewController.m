@@ -10,6 +10,7 @@
 #import "ALBaseAdViewController.h"
 #import <Adjust/Adjust.h>
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "MaticooTest.h"
 
 @interface ALMAXInterstitialAdViewController()<MAAdDelegate, MAAdRevenueDelegate>
 @property (nonatomic, strong) MAInterstitialAd *interstitialAd;
@@ -29,6 +30,10 @@
         pid = @"31952bc4acd4c5a3";
 
     self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: pid];
+    
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [self.interstitialAd setLocalExtraParameterForKey:MAT_EXTRA_GPID value:MAT_EXTRA_GPID_VALUE];
+    }
     
     self.interstitialAd.delegate = self;
     self.interstitialAd.revenueDelegate = self;
