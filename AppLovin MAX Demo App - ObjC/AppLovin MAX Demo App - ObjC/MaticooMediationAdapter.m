@@ -8,7 +8,7 @@
 
 #import "MaticooMediationAdapter.h"
 #import "MaticooMediationTrackManager.h"
-#define ADAPTER_VERSION @"1.1.3"
+#define ADAPTER_VERSION @"1.1.4"
 
 
 
