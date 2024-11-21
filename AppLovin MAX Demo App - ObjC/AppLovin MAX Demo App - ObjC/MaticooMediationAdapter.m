@@ -129,6 +129,24 @@
 #pragma clang diagnostic pop
 }
 
+- (NSDictionary *)ensureParams:(NSDictionary *)dict{
+    NSMutableDictionary * newDict = [NSMutableDictionary dictionary];
+    
+    @try {
+        [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            if ([obj isKindOfClass:[NSString class]]) {
+                [newDict setValue:obj forKey:key];
+            }
+        }];
+    }@catch (NSException *exception) {
+        
+    } @finally {
+        
+    }
+    
+    return newDict;
+}
+
 
 #pragma mark - MAInterstitialAdapter Methods
 
@@ -149,7 +167,7 @@
     self.interstitial = [[MATInterstitialAd alloc] initWithPlacementID:placementIdentifier];
     self.interstitialAdapterDelegate = [[ALMaticooMediationAdapterInterstitialAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
     if(parameters.localExtraParameters){
-        self.interstitial.localExtra = parameters.localExtraParameters;
+        self.interstitial.localExtra = [self ensureParams:parameters.localExtraParameters];
     }
     self.interstitial.delegate = self.interstitialAdapterDelegate;
     [self.interstitial loadAd];    
@@ -197,7 +215,7 @@
     else
     {
         if(parameters.localExtraParameters){
-            self.rewardedVideoAd.localExtra = parameters.localExtraParameters;
+            self.rewardedVideoAd.localExtra = [self ensureParams:parameters.localExtraParameters];
         }
         [self log: @"Loading bidding rewarded ad..."];
         [self.rewardedVideoAd loadAd];
@@ -264,7 +282,7 @@
         self.nativeAd.delegate = self.nativeAdViewAdAdapterDelegate;
         [self log: @"Loading bidding native %@ ad...", adFormat.label];
         if(parameters.localExtraParameters){
-            self.nativeAd.localExtra = parameters.localExtraParameters;
+            self.nativeAd.localExtra = [self ensureParams:parameters.localExtraParameters];
         }
         [self.nativeAd loadAd];
     }
@@ -277,7 +295,7 @@
         self.adViewAdapterDelegate = [[ALMaticooMediationAdapterAdViewDelegate alloc] initWithParentAdapter: self andNotify: delegate];
         self.bannerAdView.delegate = self.adViewAdapterDelegate;
         if(parameters.localExtraParameters){
-            self.bannerAdView.localExtra = parameters.localExtraParameters;
+            self.bannerAdView.localExtra = [self ensureParams:parameters.localExtraParameters];
         }
         [self.bannerAdView loadAd];
     }
@@ -305,7 +323,7 @@
         self.nativeAd.delegate = self.nativeAdAdapterDelegate;
         
         if(parameters.localExtraParameters){
-            self.nativeAd.localExtra = parameters.localExtraParameters;
+            self.nativeAd.localExtra = [self ensureParams:parameters.localExtraParameters];
         }
         [self.nativeAd loadAd];
     });
