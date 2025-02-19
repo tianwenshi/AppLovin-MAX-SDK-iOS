@@ -179,7 +179,17 @@
     [MaticooMediationTrackManager trackMediationAdShow:parameters.thirdPartyAdPlacementIdentifier adType:INTERSTITIAL];
     // Check if ad is already expired or invalidated, and do not show ad if that is the case. You will not get paid to show an invalidated ad.
     if (self.interstitial.isReady){
-        [self.interstitial showAdFromRootViewController];
+        
+        UIViewController *presentingViewController;
+        if ( ALSdk.versionCode >= 11020199 )
+        {
+            presentingViewController = parameters.presentingViewController ?: [ALUtils topViewControllerFromKeyWindow];
+        }
+        else
+        {
+            presentingViewController = [ALUtils topViewControllerFromKeyWindow];
+        }
+        [self.interstitial showAdFromViewController:presentingViewController];
     }
     else
     {
