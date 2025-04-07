@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)webviewCloseVisible;
 - (void)webviewInteract:(NSDictionary*)dict;
 - (void)webviewInteractClose;
+- (void)webviewVideoAdJump;
 //native
 - (void)webviewClick;
 - (void)webviewLayout;     //layout
@@ -48,8 +49,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isH5CloseBtnClick;
 @property (nonatomic, strong) NSString *videoInitJson;
 @property (nonatomic, strong) NSString *crid;
+@property (nonatomic, strong) NSString *adRequestId;
+@property (nonatomic, assign) NSInteger pid;
 @property (nonatomic, strong) NSString *finalUrl;
 @property (nonatomic, assign) BOOL isMutltipleAd;
+@property (nonatomic, strong) NSString *dsp;
 - (void)loadUrl:(NSString*)url;
 - (void)dissMiss;
 - (void)playVideo;

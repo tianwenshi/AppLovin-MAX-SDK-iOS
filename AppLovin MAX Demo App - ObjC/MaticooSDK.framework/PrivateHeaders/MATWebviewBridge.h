@@ -35,6 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mraidBridgeJsLog:(MATWebviewBridge*)bridge eventName:(NSString*)eventName info:(NSDictionary*)dict;
 - (void)vastVideoBridge:(MATWebviewBridge*)bridge videoInfo:(NSDictionary*)info;
 - (void)vastVideoBridgeCompanionImp:(MATWebviewBridge*)bridge;
+- (void)mraidBridgeAdJump:(MATWebviewBridge*)bridge;
 @end
 
 static NSString* MATWebviewBridgeCommandWindowOnload = @"onload";

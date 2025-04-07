@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class MATVideoResponse;
 @interface MATTools : NSObject
 + (UIWindow*)keyWindow;
++ (UIViewController*)topViewController;
 + (UIViewController*)rootViewController:(UIViewController *)VC;
 + (BOOL)isDisplayedInScreenWith:(UIView *)flagView;
 + (NSString*)imageTypeForImageData:(NSData *)data;
@@ -45,6 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL) checkRequestFailTimes;
 + (void) increaseRequestFailTimes;
 + (void) resetRequestFailTimes;
+
++ (NSString *)removeAllParametersFromURL:(NSString *)urlString;
 
 @end
 

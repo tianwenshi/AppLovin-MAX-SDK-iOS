@@ -50,6 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) float totalSeconds;
 @property (nonatomic, strong) NSString *crid;
 @property (nonatomic, strong) NSDictionary *localExtra;
+@property (nonatomic, assign) BOOL alreadyTrackLoad;
 //@property (nonatomic, assign) BOOL isVideoPlayed;
 
 - (void)closeControlEvent;
@@ -58,7 +59,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeCloseButton;
 - (void)setButtonImage;
 - (void)presentModalView:(UIView*)view UIController:(UIViewController*) viewController;
-- (void)cacheMediaFiles:(NSArray*)mediaFiles resources:(NSArray*)resources;
 - (NSInteger)getAdType;
 - (void)checkVideoPlay;
 - (void)webviewLayout;
@@ -67,6 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)webviewLoadSuccess;
 - (void)webviewLoadFailed:(NSString*) msg;
 - (void)trackAdImpUrl;
+- (void)trackAdLoadUrl;
 - (void)webviewCloseVisible;
 - (void)impBannerBITrack;
 - (void)loadAd;
@@ -87,8 +88,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)videoLoadError:(NSError *)error;
 - (void)videoPlayFailedWithError:(NSError *)error;
 - (void)videoPlayState:(float)state;
+- (void)cacheMediaFiles;
 - (void)webviewCacheSuccess;
--(void)sendErrorToServer:(NSError *)error withEventType:(NSString *)type andUrl:(NSString *)url;
+- (void)sendErrorToServer:(NSError *)error withEventType:(NSString *)type andUrl:(NSString *)url;
+- (void)autoStoreShowWithAsk:(NSInteger)ask andClickUrlArr:(NSArray *)urlArr;
 @end
 
 NS_ASSUME_NONNULL_END
